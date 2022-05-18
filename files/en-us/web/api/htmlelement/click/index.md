@@ -11,7 +11,7 @@ browser-compat: api.HTMLElement.click
 ---
 {{ APIRef("HTML DOM") }}
 
-The **`HTMLElement.click()`** method simulates a mouse click on
+The **`HTMLElement.click()`** method simulates a mouse click on
 an element.
 
 When `click()` is used with supported elements (such as an
@@ -22,10 +22,18 @@ events.
 ## Syntax
 
 ```js
-element.click()
+click()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Simulate a mouse-click when moving the mouse pointer over a checkbox:
 

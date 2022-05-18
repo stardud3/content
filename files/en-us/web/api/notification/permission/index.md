@@ -16,15 +16,9 @@ The `permission` read-only property of the {{domxref("Notification")}}
 interface indicates the current permission granted by the user for the current origin to
 display web notifications.
 
-## Syntax
+## Value
 
-```js
-var permission = Notification.permission;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the current permission. The value can be:
+A string representing the current permission. The value can be:
 
 - `granted`: The user has explicitly granted permission for the current
   origin to display system notifications.
@@ -77,9 +71,7 @@ function notifyMe() {
 
 ## See also
 
-- [Notifications API](/docs/Web/API/Notifications_API)
-- [Using
-  the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
+- [Notifications API](/en-US/docs/Web/API/Notifications_API)
+- [Using the Notifications API](/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API)
 - [Permissions API](/en-US/docs/Web/API/Permissions_API)
-- [Using the
-  Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)
+- [Using the Permissions API](/en-US/docs/Web/API/Permissions_API/Using_the_Permissions_API)

@@ -22,13 +22,7 @@ The read-only
 interface returns an {{jsxref("Array")}} of {{Glossary("MIME type", 'MIME types')}}
 available within the {{domxref("ClipboardItem")}}
 
-## Syntax
-
-```js
-var types = clipboardItem.types;
-```
-
-### Value
+## Value
 
 An {{jsxref("Array")}} of available {{Glossary("MIME type", 'MIME types')}}.
 
@@ -74,4 +68,4 @@ async function getClipboardContents() {
 - [Async Clipboard API demo on
   Glitch](https://async-clipboard-api.glitch.me/)
 - [Image support for Async
-  Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+  Clipboard article](https://web.dev/async-clipboard/)

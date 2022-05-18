@@ -22,7 +22,7 @@ That is, if the animation is playing forward, it sets the playback time to the l
 ## Syntax
 
 ```js
-Animation.finish();
+finish()
 ```
 
 ### Parameters
@@ -31,12 +31,12 @@ None.
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
 - `InvalidState`
-  - : The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.
+  - : The player's playback rate is 0 or the animation's playback rate is greater than 0 and the end time of the animation is infinity.
 
 ## Examples
 

@@ -21,7 +21,7 @@ interface closes the connection, if one is made, and sets the
 ## Syntax
 
 ```js
-eventSource.close();
+close()
 ```
 
 ### Parameters
@@ -39,8 +39,8 @@ var button = document.querySelector('button');
 var evtSource = new EventSource('sse.php');
 
 button.onclick = function() {
-  console.log('Connection closed');
-  evtSource.close();
+  console.log('Connection closed');
+  evtSource.close();
 }
 ```
 

@@ -21,13 +21,13 @@ a new {{domxref("CSSMathProduct")}} object which creates a new
 ## Syntax
 
 ```js
-var CSSMathProduct = new CSSMathProduct(args)
+new CSSMathProduct(args)
 ```
 
 ### Parameters
 
-- args
-  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
+- `args`
+  - : A list of values for the {{domxref('CSSMathProduct')}} object to be either a double
     integer or a {{domxref('CSSNumericValue')}}.
 
 ## Specifications

@@ -21,32 +21,30 @@ The **`addAll()`** method of the
 resulting response objects to the given cache. The request objects created during
 retrieval become keys to the stored response operations.
 
-> **Note:** `addAll()` will overwrite any key/value pairs
-> previously stored in the cache that match the request, but will fail if a
-> resulting `put()` operation would overwrite a previous cache entry stored
-> by the same `addAll()` method.
+> **Note:** `addAll()` will overwrite any key/value pairs
+> previously stored in the cache that match the request, but will fail if a
+> resulting `put()` operation would overwrite a previous cache entry stored
+> by the same `addAll()` method.
 
 ## Syntax
 
 ```js
-cache.addAll(requests[]).then(function() {
-  // requests have been added to the cache
-});
+addAll(requests)
 ```
 
 ### Parameters
 
-- requests
+- `requests`
   - : An array of string URLs that you want to be fetched and added to the cache. You can
     specify the {{domxref("Request")}} object instead of the URL.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves with `undefined`.
+A {{jsxref("Promise")}} that resolves with `undefined`.
 
 ### Exceptions
 
-- `TypeError`
+- {{jsxref("TypeError")}}
 
   - : The URL scheme is not `http` or `https`.
 

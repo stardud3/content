@@ -22,19 +22,16 @@ that can be used to shape the output of an {{ domxref("OscillatorNode") }}.
 ## Syntax
 
 ```js
-var wave = AudioContext.createPeriodicWave(real, imag[, constraints]);
+createPeriodicWave(real, imag)
+createPeriodicWave(real, imag, constraints)
 ```
-
-### Returns
-
-A {{domxref("PeriodicWave")}}.
 
 ### Parameters
 
 - `real`
-  - : An array of cosine terms (traditionally the A terms).
+  - : An array of cosine terms (traditionally the A terms).
 - `imag`
-  - : An array of sine terms (traditionally the B terms).
+  - : An array of sine terms (traditionally the B terms).
 
 The `real` and `imag` arrays have to have the same length,
 otherwise an error is thrown.
@@ -50,7 +47,11 @@ otherwise an error is thrown.
 
 > **Note:** If normalized, the resulting wave will have a maximum absolute peak value of 1.
 
-## Example
+### Return value
+
+A {{domxref("PeriodicWave")}}.
+
+## Examples
 
 The following example illustrates simple usage of `createPeriodicWave()`, to
 create a {{domxref("PeriodicWave")}} object containing a simple sine wave.
@@ -91,7 +92,7 @@ domain buffer for the frequency of the oscillator. Here, we only set one compone
 full volume (1.0) on the fundamental tone, so we get a sine wave.
 
 The coefficients of the Fourier transform should be given in _ascending_ order
-(i.e. <math>
+(i.e. <math>
 <semantics><mrow><mrow><mo>(</mo>
 <mrow><mi>a</mi>
 <mo>+</mo>
@@ -121,8 +122,8 @@ The coefficients of the Fourier transform should be given in _ascending_ order
 <mrow><mn>3</mn>
 <mi>i</mi>
 </mrow></msup></mrow><annotation encoding="TeX">\left(a+bi\right)e^{i} , \left(c+di\right)e^{2i} ,
-\left(f+gi\right)e^{3i}   </annotation>
-</semantics></math>etc.) and can be positive or negative.  A simple way of manually obtaining such
+\left(f+gi\right)e^{3i}   </annotation>
+</semantics></math>etc.) and can be positive or negative.  A simple way of manually obtaining such
 coefficients (though not the best) is to use a graphing calculator.
 
 ## Specifications

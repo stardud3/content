@@ -8,6 +8,9 @@ tags:
   - NeedsUpdate
   - ajax upload
   - upload
+spec-urls:
+  - https://html.spec.whatwg.org/multipage/number-state.html#concept-input-type-file-selected
+  - https://w3c.github.io/FileAPI/
 ---
 {{APIRef("File API")}}
 
@@ -148,7 +151,7 @@ You can style the new button for opening the file picker as you wish.
 
 ## Using a label element to trigger a hidden file input element
 
-To allow opening the file picker without using JavaScript (the click() method), a {{HTMLElement("label")}} element can be used. Note that in this case the input element must not be hidden using `display: none` (nor `visibility: hidden`), otherwise the label would not be keyboard-accessible. Use the [visually-hidden technique](https://a11yproject.com/posts/how-to-hide-content/) instead.
+To allow opening the file picker without using JavaScript (the click() method), a {{HTMLElement("label")}} element can be used. Note that in this case the input element must not be hidden using `display: none` (nor `visibility: hidden`), otherwise the label would not be keyboard-accessible. Use the [visually-hidden technique](https://www.a11yproject.com/posts/how-to-hide-content/) instead.
 
 Consider this HTML:
 
@@ -177,7 +180,7 @@ input.visually-hidden:focus-within + label {
 }
 ```
 
-There is no need to add JavaScript code to call `fileElem.click()`. Also in this case you can style the label element as you wish. You need to provide a visual cue for the focus status of the hidden input field on its label, be it an outline as shown above, or background-color or box-shadow. (As of time of writing, Firefox doesn’t show this visual cue for `<input type="file">` elements.)
+There is no need to add JavaScript code to call `fileElem.click()`. Also in this case you can style the label element as you wish. You need to provide a visual cue for the focus status of the hidden input field on its label, be it an outline as shown above, or background-color or box-shadow. (As of time of writing, Firefox doesn't show this visual cue for `<input type="file">` elements.)
 
 ## Selecting files using drag and drop
 
@@ -285,7 +288,7 @@ The HTML that presents the interface looks like this:
 </div>
 ```
 
-This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section {{anch("Using hidden file input elements using the click() method")}}, as is the method that invokes the file picker.
+This establishes our file {{HTMLElement("input")}} element as well as a link that invokes the file picker (since we keep the file input hidden to prevent that less-than-attractive user interface from being displayed). This is explained in the section [Using hidden file input elements using the click() method](#using_hidden_file_input_elements_using_the_click_method), as is the method that invokes the file picker.
 
 The `handleFiles()` method follows:
 
@@ -525,29 +528,7 @@ URL.revokeObjectURL(obj_url);
 
 ## Specifications
 
-<table class="no-markdown">
-  <thead>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-        {{SpecName('HTML WHATWG', 'number-state.html#concept-input-type-file-selected', 'File upload state')}}
-      </td>
-      <td>{{Spec2('HTML WHATWG')}}</td>
-      <td></td>
-    </tr>
-    <tr>
-      <td>{{SpecName('File API')}}</td>
-      <td>{{Spec2('File API')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## See also
 

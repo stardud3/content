@@ -13,7 +13,7 @@ tags:
 
 The **kitchensink** is a page that _attempts_ to incorporate every possible content element and Yari macro.
 
-This page attempts to be the complete intersection of every other page. No in terms of the text but in terms of the styles and macros.
+This page attempts to be the complete intersection of every other page. Not in terms of the text but in terms of the styles and macros.
 Let's start with some notes...
 
 Text that uses the `<kbd>` tag: <kbd>Shift</kbd>
@@ -177,7 +177,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>width</code></td>
       <td>A positive integer number, or the text <code>device-width</code></td>
       <td>
-        Defines the pixel width of the viewport that you want the web site to be
+        Defines the pixel width of the viewport that you want the website to be
         rendered at.
       </td>
     </tr>
@@ -195,7 +195,7 @@ _The formal syntax must be taken from the spec and added to the [MDN data reposi
       <td><code>auto</code>, <code>contain</code> or <code>cover</code></td>
       <td>
         <p>
-          The <code>auto</code> value doesn’t affect the initial layout viewport, and the whole web page is viewable.
+          The <code>auto</code> value doesn't affect the initial layout viewport, and the whole web page is viewable.
         </p>
         <p>
           The <code>contain</code> value means that the viewport is scaled to
@@ -291,7 +291,7 @@ this.color("blue");
 
 </pre></div>
 
-{{ EmbedLiveSample('Rect_code', '700', '300', '', 'Games/Techniques/2D_collision_detection') }}
+{{ EmbedLiveSample('Rect_code', '700', '300') }}
 
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 

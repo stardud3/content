@@ -50,8 +50,7 @@ This method is inherited by every object descended from `Object`, but can be ove
 > {{jsxref("undefined")}} returns `[object Undefined]`, as defined
 > in the 5th Edition of ECMAScript and subsequent Errata.
 >
-> See [Using `toString()` to
-> detect object class](#using_tostring_to_detect_object_class).
+> See [Using `toString()` to detect object class](#using_tostring_to_detect_object_class).
 
 ## Parameters
 
@@ -62,7 +61,12 @@ By default `toString()` takes no parameters. However, objects that inherit from 
 ### Overriding the default toString method
 
 You can create a function to be called in place of the default `toString()`
-method. The `toString()` function you create must return a primitive, otherwise it will be ignored.
+method. The `toString()` function you create must return a primitive. If it
+returns an object and the method is called implicitly (i.e. during type
+conversion or coercion), then its result will be ignored and the value of a
+related method, `{{jsxref("Object/valueOf", "valueOf()")}}`, will be used
+instead, or a `TypeError` will be thrown if none of these methods return a
+primitive.
 
 The following code defines the `Dog` object type and creates
 `theDog`, an object of type `Dog`:

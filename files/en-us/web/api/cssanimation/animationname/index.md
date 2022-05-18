@@ -16,15 +16,9 @@ The **`animationName`** property of the
 specifies one or more keyframe at-rules which describe the animation applied to the
 element.
 
-## Syntax
+## Value
 
-```js
-const animationName = CSSAnimation.animationName;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

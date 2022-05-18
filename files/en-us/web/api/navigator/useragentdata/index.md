@@ -11,16 +11,10 @@ browser-compat: api.Navigator.userAgentData
 ---
 {{securecontext_header}}{{APIRef("User-Agent Client Hints API")}}
 
-The **`userAgentData`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NavigatorUAData")}} object
+The **`userAgentData`** read-only property of the {{domxref("Navigator")}} interface returns a {{domxref("NavigatorUAData")}} object
 which can be used to access the {{domxref("User-Agent Client Hints API")}}.
 
-## Syntax
-
-```js
-let userAgentData = navigator.userAgentData
-```
-
-### Value
+## Value
 
 A {{domxref("NavigatorUAData")}} object.
 

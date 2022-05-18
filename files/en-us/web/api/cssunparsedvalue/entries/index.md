@@ -25,7 +25,7 @@ prototype chain as well).
 ## Syntax
 
 ```js
-CSSUnparsedValue.entries(obj)
+entries(obj)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ An array of the given `CSSUnparsedValue` object's own enumerable property
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.keys")}}
 - {{domxref("CSSUnparsedValue.length")}}

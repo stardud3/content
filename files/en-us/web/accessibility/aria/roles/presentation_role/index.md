@@ -8,6 +8,9 @@ tags:
   - Reference
   - ARIA roles
   - document structure role
+spec-urls:
+  - https://w3c.github.io/aria/#presentation
+  - https://w3c.github.io/aria-practices/#presentation_role
 ---
 
 The `presentation` role and its synonym `none` remove an element's implicit ARIA semantics from being exposed to the accessibility tree.
@@ -16,7 +19,7 @@ The content of the element will still be available to assistive technologies; it
 
 ## Description
 
-While ARIA is primarily used to express semantics, there are some situations where hiding an element’s semantics from assistive technologies is helpful. This is done with the `presentation` role or its synonym role `none`, which declare that an element is being used only for presentation and therefore does not have any accessibility semantics.
+While ARIA is primarily used to express semantics, there are some situations where hiding an element's semantics from assistive technologies is helpful. This is done with the `presentation` role or its synonym role `none`, which declare that an element is being used only for presentation and therefore does not have any accessibility semantics.
 
 Writing `<h2 role="presentation">Democracy Dies in Darkness</h2>` removes the heading semantics of the {{HTMLElement('h2')}} element, making it the equivalent of `<div>Democracy Dies in Darkness</div>`. The heading role semantics are removed, but the content itself is still available.
 
@@ -56,10 +59,7 @@ None. If a global ARIA state and property is set, `presentation` or `none` will 
 
 ## Specifications
 
-| Specification                                                                                                                    | Status                                           |
-| -------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------ |
-| {{SpecName("ARIA","#presentation","ARIA: presentation role")}}                                             | {{Spec2('ARIA')}}                         |
-| {{SpecName("ARIA Authoring Practices 1.2","#presentation_role","Hiding semantics with the presentation role")}} | {{Spec2('ARIA Authoring Practices 1.2')}} |
+{{Specifications}}
 
 ## See Also
 

@@ -7,7 +7,7 @@ tags:
   - Method
   - Reference
   - attachShadow
-  - shadow dom
+  - shadow DOM
 browser-compat: api.Element.attachShadow
 ---
 {{APIRef('Shadow DOM')}}
@@ -16,8 +16,8 @@ The **`Element.attachShadow()`** method attaches a shadow DOM tree to the specif
 
 ## Elements you can attach a shadow to
 
-Note that you can't attach a shadow root to every type of element.
-There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
+Note that you can't attach a shadow root to every type of element.
+There are some that can't have a shadow DOM for security reasons (for example {{htmlelement("a")}}).
 
 The following is a list of elements you **can** attach a shadow root to:
 
@@ -52,7 +52,7 @@ attachShadow(init)
 
 - `init`
 
-  - : A object that contain the following fields:
+  - : A object that contain the following fields:
 
     - `mode`
 
@@ -91,7 +91,7 @@ Returns a {{domxref("ShadowRoot")}} object.
 
 ## Examples
 
-The following example is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/master/word-count-web-component) demo ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
+The following example is taken from our [word-count-web-component](https://github.com/mdn/web-components-examples/tree/main/word-count-web-component) demo ([see it live also](https://mdn.github.io/web-components-examples/word-count-web-component/)).
 You can see that we use `attachShadow()` in the middle of the code to create a shadow root, which we then attach our custom element's contents to.
 
 ```js
@@ -102,20 +102,20 @@ class WordCount extends HTMLParagraphElement {
     super();
 
     // count words in element's parent element
-    var wcParent = this.parentNode;
+    const wcParent = this.parentNode;
 
     function countWords(node){
-      var text = node.innerText || node.textContent
-      return text.trim().split(/\s+/g).length;
+      const text = node.innerText || node.textContent;
+      return text.trim().split(/\s+/g).filter(a => a.trim().length > 0).length;
     }
 
-    var count = 'Words: ' + countWords(wcParent);
+    const count = `Words: ${countWords(wcParent)}`;
 
     // Create a shadow root
-    var shadow = this.attachShadow({mode: 'open'});
+    const shadow = this.attachShadow({mode: 'open'});
 
     // Create text node and add word count to it
-    var text = document.createElement('span');
+    const text = document.createElement('span');
     text.textContent = count;
 
     // Append it to the shadow root
@@ -123,9 +123,9 @@ class WordCount extends HTMLParagraphElement {
 
     // Update count when element content changes
     setInterval(function() {
-      var count = 'Words: ' + countWords(wcParent);
+      const count = `Words: ${countWords(wcParent)}`;
       text.textContent = count;
-    }, 200)
+    }, 200);
   }
 }
 

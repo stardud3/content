@@ -26,17 +26,11 @@ If the fetch request is a subresource request or the request's
 [`destination`](/en-US/docs/Web/API/Request/destination) is
 `report`, `resultingClientId` will be an empty string.
 
-## Syntax
+## Value
 
-```js
-var myResultingClientId = fetchEvent.resultingClientId;
-```
+A string.
 
-### Value
-
-A {{domxref("DOMString")}}.
-
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {

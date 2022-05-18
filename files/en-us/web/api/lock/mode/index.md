@@ -20,9 +20,9 @@ The mode is either `"exclusive"` (the default) or `"shared"`.
 
 One of `"exclusive"` or `"shared"`.
 
-## Example
+## Examples
 
-The following examples show how the mode property is passed in the call to {{domxref('LockManager.request()')}}.
+The following examples show how the mode property is passed in the call to {{domxref('LockManager.request()')}}.
 `LockManager` is the object returned by {{domxref('navigator.locks')}}.
 
 ```js

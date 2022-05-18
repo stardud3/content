@@ -11,22 +11,16 @@ tags:
   - Reference
 browser-compat: api.NetworkInformation.type
 ---
-{{apiref("Network Information API")}}{{SeeCompatTable}}
+{{apiref("Network Information API")}}{{SeeCompatTable}}
 
 The **`NetworkInformation.type`** read-only property returns
 the type of connection a device is using to communicate with the network.
 
 {{AvailableInWorkers}}
 
-## Syntax
+## Value
 
-```js
-var type = netInfo.type
-```
-
-### Return value
-
-An enumerated value that is one of the following values:
+An enumerated value that is one of the following values:
 
 - `"bluetooth"`
 - `"cellular"`

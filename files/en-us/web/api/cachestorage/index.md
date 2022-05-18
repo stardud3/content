@@ -11,13 +11,13 @@ tags:
   - ServiceWorker
 browser-compat: api.CacheStorage
 ---
-{{APIRef("Service Workers API")}}
+{{APIRef("Service Workers API")}}{{SeeCompatTable}}
 
 The **`CacheStorage`** interface represents the storage for {{domxref("Cache")}} objects.
 
 The interface:
 
-- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you’re not limited to only using it with service workers).
+- Provides a master directory of all the named caches that can be accessed by a {{domxref("ServiceWorker")}} or other type of worker or {{domxref("window")}} scope (you're not limited to only using it with service workers).
 
   > **Note:** [Chrome and Safari only expose \`CacheStorage\` to the windowed context over HTTPS](https://bugs.chromium.org/p/chromium/issues/detail?id=1026063). {{domxref("caches")}} will be undefined unless an SSL certificate is configured.
 

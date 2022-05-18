@@ -16,23 +16,24 @@ browser-compat: api.HTMLCanvasElement.mozGetAsFile
 ---
 {{APIRef("Canvas API")}} {{Deprecated_Header}} {{non-standard_header}}
 
-The non-standard, Firefox-specific the {{domxref("HTMLCanvasElement")}} method
+The non-standard, Firefox-specific the {{domxref("HTMLCanvasElement")}} method
 {{domxref("HTMLCanvasElement.mozGetAsFile", "mozGetAsFile()")}} returns a memory-based
 {{domxref("File")}} object representing the image contained in the canvas.
 
 ## Syntax
 
 ```js
-canvas.mozGetAsFile(name, type);
+mozGetAsFile(name)
+mozGetAsFile(name, type)
 ```
 
 ### Parameters
 
 - `name`
-  - : A {{domxref("DOMString")}} indicating the file name to give the file representing
+  - : A string indicating the file name to give the file representing
     the image file in memory.
 - `type` {{optional_inline}}
-  - : A {{domxref("DOMString")}} which specifies the image file format to use when
+  - : A string which specifies the image file format to use when
     creating the new image file. The default type is `image/png`. For other
     options, see our [Image file type
     and format guide](/en-US/docs/Web/Media/Formats/Image_types).
@@ -58,7 +59,7 @@ page, then uses a {{domxref("FileReader")}} to read the image data from the file
 
 The following code uses `mozGetAsFile()` to create a {{domxref("File")}}
 object from the canvas and appends it as an image to the page by loading it as a data
-URL using the {{domxref("FileReader.readAsDataURL", "readAsDataURL()")}} method. Then
+URL using the {{domxref("FileReader.readAsDataURL", "readAsDataURL()")}} method. Then
 a new {{HTMLElement("img")}} element is created using the new data URL.
 
 ```js

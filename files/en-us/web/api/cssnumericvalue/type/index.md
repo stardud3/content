@@ -1,5 +1,5 @@
 ---
-title: CSSNumericValue.type
+title: CSSNumericValue.type()
 slug: Web/API/CSSNumericValue/type
 tags:
   - API
@@ -7,7 +7,7 @@ tags:
   - CSSNumericValue
   - Experimental
   - Houdini
-  - Property
+  - Method
   - Reference
   - Type
 browser-compat: api.CSSNumericValue.type
@@ -23,7 +23,7 @@ The **`type()`** method of the
 ## Syntax
 
 ```js
-var cssNumericType = CSSNumericValue.type();
+type()
 ```
 
 ### Parameters

@@ -14,15 +14,19 @@ browser-compat: api.MediaKeySession.close
 ---
 {{APIRef("EncryptedMediaExtensions")}}
 
-The `MediaKeySession.close()` method notifies that the current media session
+The `MediaKeySession.close()` method notifies that the current media session
 is no longer needed, and that the content decryption module should release any resources
 associated with this object and close it. Then, it returns a {{jsxref('Promise')}}.
 
 ## Syntax
 
 ```js
-mediaKeySession.close().then(function() { /* ... */ });
+close()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 

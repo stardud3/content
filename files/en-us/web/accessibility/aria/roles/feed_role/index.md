@@ -7,6 +7,7 @@ tags:
   - Reference
   - feed
   - document structure role
+spec-urls: https://w3c.github.io/aria/#feed
 ---
 A `feed` is a dynamic scrollable `list` of `articles` in which articles are added to or removed from either end of the list as the user scrolls. A `feed` enables screen readers to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads.
 
@@ -22,7 +23,7 @@ A `feed` is a dynamic scrollable `list` of `articles` in which articles are adde
 
 ## Description
 
-A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for a scrollable  of [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
+A `feed` is a type of [`list`](/en-US/docs/Web/Accessibility/ARIA/Roles/list_role), the containing role for a scrollable of [`articles`](/en-US/docs/Web/Accessibility/ARIA/Roles/article_role) where scrolling may cause articles to be added to the top or end of the list. The role enables assistive technology to use the browse mode reading cursor to both read and scroll through a stream of rich content that may continue scrolling infinitely by loading more content as the user reads. Examples include an RSS feed, news feeds, social media feeds like Facebook, Instagram or Twitter, or even a list of related products on an eCommerce page. These streams can be limited or infinite, loading more content as the user scrolls. Implementing the `feed` pattern allows a screen reader to reliably read and trigger the loading of feed content while in reading mode.
 
 Unlike the document structure elements that representing static HTML elements, the `feed` role requires specific interactions and implementation of keyboard navigation. The `feed` is a container element whose children are {{HTMLElement('article')}}s or have role `article`. Each article within a feed should be focusable, with tabindex of 0 or -1. An article should be scrolled into view when it, or a descendant element, receives focus. If the addition of articles occupies the main browser thread, make sure to set `aria-busy="true"` on the feed itself, and make sure to set it back to `false` when processing ends, or the user may not see the updates.
 
@@ -46,9 +47,9 @@ Supporting the following, or a similar, interface is recommended when focus is i
 - <kbd>Control + End</kbd>: Move focus to the first focusable element after the feed.
 - <kbd>Control + Home</kbd>: Move focus to the first focusable element before the feed.
 
-If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
+If a feed is nested within a feed, such as a comments feed within a feed of blog posts, the convention is to tab into the nested feed with the <kbd>Tab</kbd> key and to provide another key, such as  <kbd>Alt + Page Down</kbd>, to navigate from an 'outer' article to the first item in that article's nested feed. Navigate between the nested feed and main feed with <kbd>Control + End</kbd> , moving focus from the inner feed to the next article in the outer feed.
 
-### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
+### <abbr title="Accessible Rich Internet Applications">WAI-ARIA</abbr> roles, states, and properties
 
 - [`aria-label`](/en-US/docs/Web/Accessibility/ARIA/Attributes/aria-label)
   - : If the feed has no visible title, the `feed` element has a label specified with `aria-label`. If it does, see `aria-labelledby`.
@@ -72,13 +73,11 @@ None, except as required by any attributes. For example, setting [`aria-busy`](/
 
 ## Best practices
 
-To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See {{anch('Keyboard interactions')}}.
+To ensure good user experience, avoid inserting or removing articles in the middle of a `feed`, load new articles before the user has reached the end of the feed, and provide keyboard commands for moving focus among articles so that keyboard users can navigate through your feed. See [Keyboard interactions](#keyboard_interactions).
 
 ## Specifications
 
-| Specification                                    | Status                   |
-| ------------------------------------------------ | ------------------------ |
-| {{SpecName("ARIA","#feed","feed")}} | {{Spec2('ARIA')}} |
+{{Specifications}}
 
 ## See also
 

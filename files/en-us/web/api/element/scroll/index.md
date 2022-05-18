@@ -18,8 +18,8 @@ element.
 ## Syntax
 
 ```js
-element.scroll(x-coord, y-coord)
-element.scroll(options)
+scroll(x-coord, y-coord)
+scroll(options)
 ```
 
 ### Parameters
@@ -42,6 +42,10 @@ element.scroll(options)
     - `behavior`
       - : Specifies whether the scrolling should animate smoothly (`smooth`), happen instantly in a single jump (`instant`), or let the browser choose (`auto`, default).
 
+### Return value
+
+None ({{jsxref("undefined")}}).
+
 ## Examples
 
 ```js
@@ -49,7 +53,7 @@ element.scroll(options)
 element.scroll(0, 1000);
 ```
 
-Using `options`:
+Using `options`:
 
 ```js
 element.scroll({

@@ -16,7 +16,7 @@ method releases an existing object URL which was previously created by calling
 {{domxref("URL.createObjectURL()") }}.
 
 Call this method when you've finished
-using an object URL to let the browser know not to keep the reference to the file any
+using an object URL to let the browser know not to keep the reference to the file any
 longer.
 
 {{AvailableInWorkers}}
@@ -28,14 +28,18 @@ longer.
 ## Syntax
 
 ```js
-URL.revokeObjectURL(objectURL)
+revokeObjectURL(objectURL)
 ```
 
 ### Parameters
 
 - `objectURL`
-  - : A {{domxref("DOMString")}} representing a object URL that was previously created by
+  - : A string representing a object URL that was previously created by
     calling {{domxref("URL.createObjectURL", "createObjectURL()") }}.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

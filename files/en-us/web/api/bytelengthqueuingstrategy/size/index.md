@@ -14,18 +14,18 @@ browser-compat: api.ByteLengthQueuingStrategy.size
 {{SeeCompatTable}}{{APIRef("Streams")}}
 
 The **`size()`** method of the
-{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk’s
+{{domxref("ByteLengthQueuingStrategy")}} interface returns the given chunk's
 `byteLength` property.
 
 ## Syntax
 
 ```js
-var size = byteLengthQueuingStrategy.size(chunk);
+size(chunk)
 ```
 
 ### Parameters
 
-- chunk
+- `chunk`
   - : A chunk of data being passed through the stream.
 
 ### Return value

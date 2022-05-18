@@ -15,7 +15,7 @@ browser-compat: api.IDBIndex.openKeyCursor
 {{ APIRef("IndexedDB") }}
 
 The **`openKeyCursor()`** method of the
-{{domxref("IDBIndex")}} interface returns an {{domxref("IDBRequest")}} object, and, in
+{{domxref("IDBIndex")}} interface returns an {{domxref("IDBRequest")}} object, and, in
 a separate thread, creates a cursor over the specified key range, as arranged by this
 index.
 
@@ -25,7 +25,7 @@ specified direction.
 If the key range is not specified or is null, then the range includes all the keys.
 
 > **Note:** Cursors returned by `openKeyCursor()` do not
-> make the referenced value available as [`IDBIndex.openCursor`](/en-US/docs/Web/API/IDBIndex/openCursor) does.
+> make the referenced value available as [`IDBIndex.openCursor`](/en-US/docs/Web/API/IDBIndex/openCursor) does.
 > This makes obtaining a list of keys much more efficient.
 
 {{AvailableInWorkers}}
@@ -33,19 +33,19 @@ If the key range is not specified or is null, then the range includes all the ke
 ## Syntax
 
 ```js
-var request = myIndex.openKeyCursor();
-var request = myIndex.openKeyCursor(range);
-var request = myIndex.openKeyCursor(range, direction);
+openKeyCursor()
+openKeyCursor(range)
+openKeyCursor(range, direction)
 ```
 
 ### Parameters
 
-- range {{optional_inline}}
+- `range` {{optional_inline}}
   - : A key or {{domxref("IDBKeyRange")}} to use as the cursor's range. If nothing is
     passed, this will default to a key range that selects all the records in this object
     store.
-- direction {{optional_inline}}
-  - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
+- `direction` {{optional_inline}}
+  - : The cursor's [direction](/en-US/docs/Web/API/IDBCursor#constants). See [IDBCursor Constants](/en-US/docs/Web/API/IDBCursor#constants) for possible
     values.
 
 ### Return value
@@ -59,24 +59,24 @@ This method may raise a {{domxref("DOMException")}} of one of the following type
 
 - `TransactionInactiveError` {{domxref("DOMException")}}
   - : Thrown if this {{domxref("IDBIndex")}}'s transaction is inactive.
-- `TypeError` {{domxref("DOMException")}}
+- {{jsxref("TypeError")}}
   - : Thrown if the value for the direction parameter is invalid.
 - `DataError` {{domxref("DOMException")}}
-  - : Thrown if the key or key range provided contains an invalid key.
+  - : Thrown if the key or key range provided contains an invalid key.
 - `InvalidStateError` {{domxref("DOMException")}}
   - : Thrown if the {{domxref("IDBIndex")}} has been deleted or removed.
 
-## Example
+## Examples
 
 In the following example we open a transaction and an object store, then get the
-index `lName` from a simple contacts database. We then open a key cursor on
-the index using `openKeyCursor()` — this works the same as opening a cursor
-directly on an `ObjectStore` using
+index `lName` from a simple contacts database. We then open a key cursor on
+the index using `openKeyCursor()` — this works the same as opening a cursor
+directly on an `ObjectStore` using
 {{domxref("IDBObjectStore.openKeyCursor")}} except that the returned records are sorted
 based on the index, not the primary key.
 
-Finally, we iterate through each record in the index, and insert the last name and the
-corresponding primary key of the referenced record into an HTML table.
+Finally, we iterate through each record in the index, and insert the last name and the
+corresponding primary key of the referenced record into an HTML table.
 
 ```js
 function displayDataByIndex() {

@@ -20,7 +20,7 @@ If no values satisfy the testing function, {{jsxref("undefined")}} is returned.
 
 - If you need the **index** of the found element in the array, use {{jsxref("Array.findIndex", "findIndex()")}}.
 - If you need to find the **index of a value**, use {{jsxref("Array.prototype.indexOf()")}}.
-  (It’s similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
+  (It's similar to {{jsxref("Array.findIndex", "findIndex()")}}, but checks each element for equality with the value instead of using a testing function.)
 - If you need to find if a value **exists** in an array, use {{jsxref("Array.prototype.includes()")}}.
   Again, it checks each element for equality with the value instead of using a testing function.
 - If you need to find if any element satisfies the provided testing function, use {{jsxref("Array.prototype.some()")}}.
@@ -48,13 +48,15 @@ find(function(element, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function to execute on each value in the array, taking 3 arguments:
+  - : Function to execute on each value in the array.
+
+    The function is called with the following arguments:
 
     - `element`
       - : The current element in the array.
-    - `index` {{optional_inline}}
+    - `index`
       - : The index (position) of the current element in the array.
-    - `array` {{optional_inline}}
+    - `array`
       - : The array that `find` was called on.
 
     The callback must return a [truthy](/en-US/docs/Glossary/Truthy) value to indicate a matching element has been found.

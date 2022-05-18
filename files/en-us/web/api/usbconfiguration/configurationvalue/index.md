@@ -17,16 +17,10 @@ browser-compat: api.USBConfiguration.configurationValue
 The **`configurationValue`** read-only property
 of the {{domxref("USBConfiguration")}} interface null
 
-## Syntax
-
-```js
-var value = USBConfiguration.configurationValue
-```
-
-### Value
+## Value
 
 The [configuration
-descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) of the {{domxref("USBDevice")}} specified in the constructor of the
+descriptor](https://www.beyondlogic.org/usbnutshell/usb5.shtml#ConfigurationDescriptors) of the {{domxref("USBDevice")}} specified in the constructor of the
 current {{domxref("USBConfiguration")}} instance.
 
 ## Specifications

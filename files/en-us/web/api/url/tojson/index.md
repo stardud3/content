@@ -12,8 +12,8 @@ browser-compat: api.URL.toJSON
 ---
 {{APIRef("URL API")}}
 
-The **`toJSON()`** method of the {{domxref("URL")}} interface
-returns a {{domxref("USVString")}} containing a serialized version of the URL,
+The **`toJSON()`** method of the {{domxref("URL")}} interface
+returns a string containing a serialized version of the URL,
 although in practice it seems to have the same effect as
 {{domxref("URL.toString()")}}.
 
@@ -22,12 +22,16 @@ although in practice it seems to have the same effect as
 ## Syntax
 
 ```js
-const href = url.toJSON()
+toJSON()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 

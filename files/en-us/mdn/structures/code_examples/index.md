@@ -31,8 +31,8 @@ We'll discuss each one in later sections.
 Each type of code example has its own use cases. When should you use each one?
 
 - Static examples are useful if you just need to show some code, and it isn't super important to show what the live result is. Some people just want something to copy and paste. Maybe you are just showing an intermediate step, or the source code is enough. (For example, the article is for an advanced audience, and they just need to see the code.) Also, you might be demonstrating an API feature that doesn't work well as an embedded example, which might need its own separate page to link to.
-- Traditional live samples are useful if you want to show source code on a page, then show it running, and you’re not that bothered about it being accessible as a standalone example. This approach also has the advantage that if you are showing source code and live examples side by side, you only need to update the code once to update both. They can however be awkward to edit and get working.
-- GitHub live samples are useful when you’ve got an existing example you want to embed, don’t want to show the source code for, and/or you want to make sure the example is available in standalone form. They have a better contribution workflow, but it does require you to know GitHub. Also because on-page code and source code are in two different places, it is easier for them to get out of sync.
+- Traditional live samples are useful if you want to show source code on a page, then show it running, and you're not that bothered about it being accessible as a standalone example. This approach also has the advantage that if you are showing source code and live examples side by side, you only need to update the code once to update both. They can however be awkward to edit and get working.
+- GitHub live samples are useful when you've got an existing example you want to embed, don't want to show the source code for, and/or you want to make sure the example is available in standalone form. They have a better contribution workflow, but it does require you to know GitHub. Also because on-page code and source code are in two different places, it is easier for them to get out of sync.
 - The interactive examples are great as readers can modify values on the fly — this is very valuable for learning. However, they are more complex to set up than the other forms, with more limitations, and are intended for specific purposes.
 
 If you are not sure which one to use, you should default to traditional or GitHub live samples, depending on which one you are most comfortable with. You are also welcome to [ask for help](/en-US/docs/MDN/Contribute/Getting_started#step_4_ask_for_help).
@@ -63,11 +63,11 @@ Optionally, you might want to show a static image of the code's resulting output
 
 ## Traditional live samples
 
-Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
+Traditional live samples are inserted into the page using the [`EmbedLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedLiveSample.ejs) macro. An \\{{EmbedLiveSample}} call dynamically grabs the code blocks in the same document section as itself and puts them into a document, which it then inserts into the page inside an {{htmlelement("iframe")}}. See our [Live samples guide](/en-US/docs/MDN/Structures/Live_samples) for more information.
 
 ## GitHub live samples
 
-GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
+GitHub live samples are inserted into the page using the [`EmbedGHLiveSample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedGHLiveSample.ejs) macro. An \\{{EmbedGHLiveSample}} call dynamically grabs the document at a specified URL (which has to be inside the **mdn** GitHub organization), and inserts into the page inside an {{htmlelement("iframe")}}.
 
 These work in a very similar way to Traditional live samples, but they are a lot simpler:
 
@@ -103,12 +103,12 @@ The interactive examples are intended to be used at the top of MDN reference pag
 - The UI is more performance-intensive than other code examples; you shouldn't put more than one on each MDN article you apply them to.
 - They are not intended for large code examples — the UI supports a range of fixed sizes, which only really work for short (say, 10–15 line) examples.
 
-If you want to submit an example, you can find out how at the [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/master/CONTRIBUTING.md).
+If you want to submit an example, you can find out how at the [interactive examples repo Contribution guide](https://github.com/mdn/interactive-examples/blob/main/CONTRIBUTING.md).
 
 If you find a page that doesn't have an associated interactive example, you are welcome to contribute one!
 
 ### Interactive example demo
 
-The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/master/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
+The [`EmbedInteractiveExample`](https://github.com/mdn/yari/blob/main/kumascript/macros/EmbedInteractiveExample.ejs) macro is used to embed finished examples into MDN pages. For example, the macro call \\{{EmbedInteractiveExample("pages/js/array-push.html")}} displays the following code example:
 
 {{EmbedInteractiveExample("pages/js/array-push.html")}}Try adjusting the code to see what happens, and playing with the controls.

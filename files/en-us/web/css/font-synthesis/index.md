@@ -26,6 +26,7 @@ font-synthesis: weight style small-caps;
 font-synthesis: inherit;
 font-synthesis: initial;
 font-synthesis: revert;
+font-synthesis: revert-layer;
 font-synthesis: unset;
 ```
 
@@ -68,13 +69,13 @@ Most standard Western fonts include italic and bold variants, and some fonts inc
 
 ```css
 em {
-  font-weight: bold;
+  font-weight: bold;
 }
 .syn {
-  font-synthesis: style weight small-caps;
+  font-synthesis: style weight small-caps;
 }
 .no-syn {
-  font-synthesis: none;
+  font-synthesis: none;
 }
 ```
 

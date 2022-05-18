@@ -14,19 +14,13 @@ browser-compat: api.Credential.id
 {{SeeCompatTable}}{{APIRef("Credential Management API")}}
 
 The **`id`** property of the
-{{domxref("Credential")}} interface returns a {{domxref("DOMString")}} containing the
+{{domxref("Credential")}} interface returns a string containing the
 credential's identifier. This might be any one of a GUID, username, or email
 address.
 
-## Syntax
+## Value
 
-```js
-var id = Credential.id;
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the credential's identifier.
+A string containing the credential's identifier.
 
 ## Specifications
 

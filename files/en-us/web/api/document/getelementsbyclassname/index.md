@@ -31,16 +31,17 @@ descendants of the specified root element with the given class name(s).
 ## Syntax
 
 ```js
-var elements = document.getElementsByClassName(names); // or:
-var elements = rootElement.getElementsByClassName(names);
+getElementsByClassName(names)
 ```
 
-- _elements_ is a live {{domxref("HTMLCollection")}} of found elements.
-- _names_ is a string representing the class name(s) to match; multiple class
-  names are separated by whitespace
-- {{domxref("Element.getElementsByClassName", "getElementsByClassName")}} can be
-  called on any element, not only on the {{domxref("document")}}. The element on which
-  it is called will be used as the root of the search.
+### Parameters
+
+- `names`
+  - : A string representing the class name(s) to match; multiple class names are separated by whitespace.
+
+### Return value
+
+A live {{domxref("HTMLCollection")}} of found elements.
 
 ## Examples
 
@@ -138,7 +139,7 @@ for (var i=0; i < allOrangeJuiceByClass.length; i++) {
 var allOrangeJuiceQuery = document.querySelectorAll('.orange.juice');
 result += "\n\ndocument.querySelectorAll('.orange.juice')";
 for (var i=0; i < allOrangeJuiceQuery.length; i++) {
-    result += "\n  " + allOrangeJuiceQuery[i].textContent;
+    result += "\n  " + allOrangeJuiceQuery[i].textContent;
 }
 
 document.getElementById("resultArea").value = result;

@@ -17,7 +17,7 @@ The **`WebGLRenderingContext.bindBuffer()`** method of the [WebGL API](/en-US/do
 ## Syntax
 
 ```js
-void gl.bindBuffer(target, buffer);
+bindBuffer(target, buffer)
 ```
 
 ### Parameters
@@ -49,7 +49,7 @@ void gl.bindBuffer(target, buffer);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -77,7 +77,7 @@ gl.bindBuffer(gl.ARRAY_BUFFER, buffer);
 ### Getting current bindings
 
 To check the current buffer bindings, query the `ARRAY_BUFFER_BINDING`
-and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
+and `ELEMENT_ARRAY_BUFFER_BINDING` constants.
 
 ```js
 gl.getParameter(gl.ARRAY_BUFFER_BINDING);

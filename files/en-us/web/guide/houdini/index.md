@@ -11,7 +11,7 @@ tags:
 ---
 
 Houdini is a set of low-level APIs that exposes parts of the CSS engine,
-giving developers the power to extend CSS by hooking into the styling and layout process of a browser’s rendering engine.
+giving developers the power to extend CSS by hooking into the styling and layout process of a browser's rendering engine.
 Houdini is a group of APIs that give developers direct access to the {{domxref("CSS_Object_Model")}} (CSSOM),
 enabling developers to write code the browser can parse as CSS,
 thereby creating new CSS features without waiting for them to be implemented natively in browsers.
@@ -92,7 +92,7 @@ The CSS Typed OM exposes CSS values as typed JavaScript objects to allow their p
 
 - [CSS Typed OM reference](/en-US/docs/Web/API/CSS_Typed_OM_API)
 - [CSS Typed OM guide](/en-US/docs/Web/API/CSS_Typed_OM_API/Guide)
-- [Working with the new CSS Typed Object Model](https://developers.google.com/web/updates/2018/03/cssom)
+- [Working with the new CSS Typed Object Model](https://developer.chrome.com/blog/cssom/)
 
 ### CSS Painting API
 

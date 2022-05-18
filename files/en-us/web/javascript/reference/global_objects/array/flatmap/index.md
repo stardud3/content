@@ -43,14 +43,16 @@ flatMap(function(currentValue, index, array) { /* ... */ }, thisArg)
 
 - `callbackFn`
 
-  - : Function that produces an element of the new Array, taking three arguments:
+  - : Function that produces an element of the new Array.
+
+    The function is called with the following arguments:
 
     - `currentValue`
       - : The current element being processed in the array.
-    - `index`{{optional_inline}}
+    - `index`
       - : The index of the current element being processed in the array.
-    - `array`{{optional_inline}}
-      - : The array `map` was called upon.
+    - `array`
+      - : The array `flatMap` was called upon.
 
 - `thisArg`{{optional_inline}}
   - : Value to use as `this` when executing `callbackFn`.

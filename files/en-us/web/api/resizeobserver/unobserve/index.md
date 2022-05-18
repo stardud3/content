@@ -20,14 +20,13 @@ The **`unobserve()`** method of the
 ## Syntax
 
 ```js
-void unobserve(target);
+unobserve(target)
 ```
 
 ### Parameters
 
 - `target`
-  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be
-    unobserved.
+  - : A reference to an {{domxref('Element')}} or {{domxref('SVGElement')}} to be unobserved.
 
 ### Return value
 
@@ -45,32 +44,32 @@ source](https://github.com/mdn/dom-examples/blob/master/resize-observer/resize-o
 
 ```js
 const resizeObserver = new ResizeObserver(entries => {
-  for (let entry of entries) {
-    if(entry.contentBoxSize) {
-      // Checking for chrome as using a non-standard array
-      if (entry.contentBoxSize[0]) {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
-      } else {
-        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
-        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
-      }
-    } else {
-      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
-      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
-    }
-  }
-  console.log('Size changed');
+  for (let entry of entries) {
+    if(entry.contentBoxSize) {
+      // Checking for chrome as using a non-standard array
+      if (entry.contentBoxSize[0]) {
+        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize[0].inlineSize/200) + 'rem';
+        pElem.style.fontSize = Math.max(1, entry.contentBoxSize[0].inlineSize/600) + 'rem';
+      } else {
+        h1Elem.style.fontSize = Math.max(1.5, entry.contentBoxSize.inlineSize/200) + 'rem';
+        pElem.style.fontSize = Math.max(1, entry.contentBoxSize.inlineSize/600) + 'rem';
+      }
+    } else {
+      h1Elem.style.fontSize = Math.max(1.5, entry.contentRect.width/200) + 'rem';
+      pElem.style.fontSize = Math.max(1, entry.contentRect.width/600) + 'rem';
+    }
+  }
+  console.log('Size changed');
 });
 
 resizeObserver.observe(divElem);
 
 checkbox.addEventListener('change', () => {
-  if(checkbox.checked) {
-    resizeObserver.observe(divElem);
-  } else {
-    resizeObserver.unobserve(divElem);
-  }
+  if(checkbox.checked) {
+    resizeObserver.observe(divElem);
+  } else {
+    resizeObserver.unobserve(divElem);
+  }
 });
 ```
 

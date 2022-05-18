@@ -14,7 +14,7 @@ browser-compat: html.elements.base
 
 The **`<base>`** [HTML](/en-US/docs/Web/HTML) element specifies the base URL to use for all _relative_ URLs in a document. There can be only one `<base>` element in a document.
 
-A document's used base URL can be accessed by scripts with {{domxref('Node/baseURI')}}. If the document has no `<base>` elements, then `baseURI` defaults to {{domxref("location.href")}}.
+A document's used base URL can be accessed by scripts with {{domxref('Node.baseURI')}}. If the document has no `<base>` elements, then `baseURI` defaults to {{domxref("location.href")}}.
 
 <table class="properties">
   <tbody>
@@ -64,7 +64,7 @@ A document's used base URL can be accessed by scripts with {{domxref('Node/baseU
 
 This element's attributes include the [global attributes](/en-US/docs/Web/HTML/Global_attributes).
 
-> **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}’s `href` attribute.
+> **Warning:** If either of the following attributes are specified, this element **must** come before other elements with attribute values of URLs, such as {{HTMLElement("link")}}'s `href` attribute.
 
 - {{htmlattrdef("href")}}
   - : The base URL to be used throughout the document for relative URLs. Absolute and relative URLs are allowed.

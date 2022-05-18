@@ -84,7 +84,7 @@ To implement such semantic mark up, HTML provides dedicated tags that you can us
 
 ### Active learning: exploring the code for our example
 
-Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/master/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
+Our example seen above is represented by the following code (you can also [find the example in our GitHub repository](https://github.com/mdn/learning-area/blob/main/html/introduction-to-html/document_and_website_structure/index.html)). We'd like you to look at the example above, and then look over the listing below to see what parts make up what section of the visual.
 
 ```html
 <!DOCTYPE html>
@@ -241,7 +241,7 @@ and his markup didn't read very well.</p>
 
 Without the `<br>` elements, the paragraph would just be rendered in one long line (as we said earlier in the course, [HTML ignores most whitespace](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started#whitespace_in_html)); with `<br>` elements in the code, the markup renders like this:
 
-{{EmbedLiveSample('br_the_line_break_element', '100%', '125px')}}
+{{EmbedLiveSample('br_the_line_break_element', '100%', 150)}}
 
 #### \<hr>: the thematic break element
 
@@ -278,13 +278,9 @@ Try carrying out the above exercise for a website of your own creation. What wou
 
 > **Note:** Save your work somewhere; you might need it later on.
 
-## Test your skills!
-
-You've reached the end of this article, but can you remember the most important information? You can find a detailed assessment that tests these skills at the end of the module; see [Structuring a page of content](/en-US/docs/Learn/HTML/Introduction_to_HTML/Structuring_a_page_of_content). We'd advise going through the next article in the series first and not just skipping to it though!
-
 ## Summary
 
-At this point you should have a better idea about how to structure a web page/site. In the last article of this module, we'll study how to debug HTML.
+At this point, you should have a better idea about how to structure a web page/site. In the last article of this module, we'll learn how to [debug HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Debugging_HTML).
 
 ## See also
 
@@ -295,7 +291,7 @@ At this point you should have a better idea about how to structure a web page/si
 ## In this module
 
 - [Getting started with HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/Getting_started)
-- [What’s in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
+- [What's in the head? Metadata in HTML](/en-US/docs/Learn/HTML/Introduction_to_HTML/The_head_metadata_in_HTML)
 - [HTML text fundamentals](/en-US/docs/Learn/HTML/Introduction_to_HTML/HTML_text_fundamentals)
 - [Creating hyperlinks](/en-US/docs/Learn/HTML/Introduction_to_HTML/Creating_hyperlinks)
 - [Advanced text formatting](/en-US/docs/Learn/HTML/Introduction_to_HTML/Advanced_text_formatting)

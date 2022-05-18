@@ -13,7 +13,7 @@ browser-compat: api.BluetoothRemoteGATTCharacteristic
 ---
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
-The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral’s service.
+The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en-US/docs/Web/API/Web_Bluetooth_API) represents a GATT Characteristic, which is a basic data element that provides further information about a peripheral's service.
 
 {{InheritanceDiagram}}
 
@@ -22,7 +22,7 @@ The `BluetoothRemoteGattCharacteristic` interface of the [Web Bluetooth API](/en
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.service")}}{{ReadOnlyInline}}
   - : Returns the {{DOMxRef("BluetoothRemoteGATTService")}} this characteristic belongs to.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.uuid")}}{{ReadOnlyInline}}
-  - : Returns a {{DOMxRef("DOMString")}} containing the UUID of the characteristic, for example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate Measurement characteristic.
+  - : Returns a string containing the UUID of the characteristic, for example `'00002a37-0000-1000-8000-00805f9b34fb'` for the Heart Rate Measurement characteristic.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.properties")}}{{ReadOnlyInline}}
   - : Returns the properties of this characteristic.
 - {{DOMxRef("BluetoothRemoteGATTCharacteristic.value")}}{{ReadOnlyInline}}

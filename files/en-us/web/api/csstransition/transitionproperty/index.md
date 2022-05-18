@@ -16,15 +16,9 @@ The **`transitionProperty`** property of the
 name** of the transition. This is the longhand CSS property for which the
 transition was generated.
 
-## Syntax
+## Value
 
-```js
-const transitionProperty = CSSAnimation.transitionProperty;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}.
+A string.
 
 ## Examples
 

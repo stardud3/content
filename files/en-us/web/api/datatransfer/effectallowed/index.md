@@ -28,15 +28,9 @@ which effect is permitted.
 Assigning a value to `effectAllowed` in events other than
 {{event("dragstart")}} has no effect.
 
-## Syntax
+## Value
 
-```js
-dataTransfer.effectAllowed;
-```
-
-### Values
-
-A {{domxref("DOMString")}} representing the drag operation that is allowed. The
+A string representing the drag operation that is allowed. The
 possible values are:
 
 - none
@@ -64,7 +58,7 @@ is retained.
 Internet Explorer will change the value to be lowercased; thus, `linkMove`
 will become `linkmove`, and so on.
 
-## Example
+## Examples
 
 This example shows the use of the `effectAllowed` and
 {{domxref("DataTransfer.dropEffect", "dropEffect")}} properties.

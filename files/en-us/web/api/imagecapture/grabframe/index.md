@@ -24,14 +24,18 @@ a {{domxref("ImageBitmap")}} containing the snapshot.
 ## Syntax
 
 ```js
-const bitmapPromise = imageCapture.grabFrame()
+grabFrame()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
+A {{jsxref("Promise")}} that resolves to an {{domxref("ImageBitmap")}} object.
 
-## Example
+## Examples
 
 This example is extracted from this [Simple
 Image Capture demo](https://simpl.info/imagecapture/). It shows how to use the {{jsxref("Promise")}} returned by
@@ -46,17 +50,17 @@ var canvas = document.querySelector('canvas');
 grabFrameButton.onclick = grabFrame;
 
 function grabFrame() {
-  imageCapture.grabFrame()
-  .then(function(imageBitmap) {
-    console.log('Grabbed frame:', imageBitmap);
-    canvas.width = imageBitmap.width;
-    canvas.height = imageBitmap.height;
-    canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
-    canvas.classList.remove('hidden');
-  })
+  imageCapture.grabFrame()
+  .then(function(imageBitmap) {
+    console.log('Grabbed frame:', imageBitmap);
+    canvas.width = imageBitmap.width;
+    canvas.height = imageBitmap.height;
+    canvas.getContext('2d').drawImage(imageBitmap, 0, 0);
+    canvas.classList.remove('hidden');
+  })
   .catch(function(error) {
-    console.log('grabFrame() error: ', error);
-  });
+    console.log('grabFrame() error: ', error);
+  });
 }
 ```
 

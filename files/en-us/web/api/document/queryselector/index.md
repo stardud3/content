@@ -27,13 +27,13 @@ selector, or group of selectors. If no matches are found, `null` is returned.
 ## Syntax
 
 ```js
-element = document.querySelector(selectors);
+querySelector(selectors)
 ```
 
 ### Parameters
 
-- _selectors_
-  - : A {{domxref("DOMString")}} containing one or more selectors to match. This string
+- `selectors`
+  - : A string containing one or more selectors to match. This string
     must be a valid CSS selector string; if it isn't, a `SyntaxError` exception
     is thrown. See [Locating
     DOM elements using selectors](/en-US/docs/Web/API/Document_object_model/Locating_DOM_elements_using_selectors) for more about selectors and how to manage them.
@@ -41,7 +41,7 @@ element = document.querySelector(selectors);
 > **Note:** Characters that are not part of standard CSS syntax must be
 > escaped using a backslash character. Since JavaScript also uses backslash escaping, be
 > especially careful when writing string literals using these characters. See
-> {{anch("Escaping special characters")}} for more information.
+> [Escaping special characters](#escaping_special_characters) for more information.
 
 ### Return value
 
@@ -54,8 +54,8 @@ If you need a list of all elements matching the specified selectors, you should 
 
 ### Exceptions
 
-- `SyntaxError`
-  - : The syntax of the specified _selectors_ is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : Thrown if the syntax of the specified _selectors_ is invalid.
 
 ## Usage notes
 

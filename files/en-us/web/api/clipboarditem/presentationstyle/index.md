@@ -21,13 +21,7 @@ The read-only
 **`presentationStyle`** property of the {{domxref("ClipboardItem")}}
 interface returns a {{jsxref("String")}} indicating how an item should be presented.
 
-## Syntax
-
-```js
-var presentationStyle = clipboardItem.presentationStyle;
-```
-
-### Value
+## Value
 
 One of either `"unspecified"`, `"inline"` or `"attachment"`.
 
@@ -66,4 +60,4 @@ async function getClipboardContents() {
 - [Async Clipboard API demo on
   Glitch](https://async-clipboard-api.glitch.me/)
 - [Image support for Async
-  Clipboard article](https://web.dev/image-support-for-async-clipboard/)
+  Clipboard article](https://web.dev/async-clipboard/)

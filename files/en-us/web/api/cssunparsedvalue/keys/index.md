@@ -23,7 +23,7 @@ for each index in the array.
 ## Syntax
 
 ```js
-CSSUnparsedValue.keys()
+keys()
 ```
 
 ### Parameters
@@ -44,7 +44,7 @@ A new {{jsxref("Array")}}.
 
 ## See also
 
-- {{domxref("CSSUnparsedValue.CSSUnparsedValue()")}}
+- {{domxref("CSSUnparsedValue.CSSUnparsedValue", "CSSUnparsedValue()")}}
 - {{domxref("CSSUnparsedValue.entries")}}
 - {{domxref("CSSUnparsedValue.forEach")}}
 - {{domxref("CSSUnparsedValue.length")}}

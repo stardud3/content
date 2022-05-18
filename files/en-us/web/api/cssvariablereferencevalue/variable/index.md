@@ -18,15 +18,9 @@ The **`variable`** property of the
 {{domxref("CSSVariableReferenceValue")}} interface returns the [custom property name](/en-US/docs/Web/CSS/--*) of the
 {{domxref("CSSVariableReferenceValue")}}.
 
-## Syntax
+## Value
 
-```js
-var variable = cssVariableReferenceValue.variable;
-```
-
-### Value
-
-A {{domxref('USVString')}} beginning with `--` (that is, a [custom property name](/en-US/docs/Web/CSS/--*)).
+A string beginning with `--` (that is, a [custom property name](/en-US/docs/Web/CSS/--*)).
 
 ## Specifications
 

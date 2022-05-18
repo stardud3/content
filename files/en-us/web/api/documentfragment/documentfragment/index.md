@@ -17,10 +17,14 @@ The **`DocumentFragment()`** constructor returns a new, empty
 ## Syntax
 
 ```js
-fragment = new DocumentFragment()
+new DocumentFragment()
 ```
 
-## Example
+### Parameters
+
+None.
+
+## Examples
 
 ```js
 let fragment = new DocumentFragment();

@@ -4,11 +4,10 @@ slug: Web/API/BatteryManager/dischargingTime
 tags:
   - API
   - Property
-  - Deprecated
   - Reference
 browser-compat: api.BatteryManager.dischargingTime
 ---
-{{deprecated_header}}{{APIRef("Battery API")}}
+{{APIRef("Battery API")}}
 
 The **`BatteryManager.dischargingTime`** property indicates the amount of time, in seconds, that remains until the battery is fully
 discharged,
@@ -20,7 +19,11 @@ When its value changes, the [`dischargingtimechange`](/en-US/docs/Web/API/Batter
 > **Note:** Even if the time returned is precise to the second, browsers round them to a higher
 > interval (typically to the closest 15 minutes) for privacy reasons.
 
-## Example
+## Value
+
+A number.
+
+## Examples
 
 ### HTML Content
 

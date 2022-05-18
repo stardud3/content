@@ -20,12 +20,12 @@ the file.
 
 Note that this method was once removed from the File API specification, but
 re-introduced for backward compatibility.
-Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
+Using {{domxref("FileReader.readAsArrayBuffer()")}} is recommended.
 
 ## Syntax
 
 ```js
-instanceOfFileReader.readAsBinaryString(blob);
+readAsBinaryString(blob)
 ```
 
 ### Parameters
@@ -33,14 +33,18 @@ instanceOfFileReader.readAsBinaryString(blob);
 - `blob`
   - : The {{domxref("Blob")}} or {{domxref("File")}} from which to read.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var canvas = document.createElement('canvas');
 var height = 200;
-var width  = 200;
+var width  = 200;
 
-canvas.width  = width;
+canvas.width  = width;
 canvas.height = height;
 
 var ctx = canvas.getContext('2d');
@@ -57,7 +61,7 @@ canvas.toBlob(function (blob) {
     console.log(reader.result);
   }
 
-  reader.readAsBinaryString(blob);
+  reader.readAsBinaryString(blob);
 });
 ```
 

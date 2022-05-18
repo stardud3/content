@@ -22,7 +22,7 @@ interface aborts the current segment and resets the segment parser.
 ## Syntax
 
 ```js
-sourceBuffer.abort();
+abort()
 ```
 
 ### Parameters
@@ -31,7 +31,7 @@ None.
 
 ### Return value
 
-{{jsxref('undefined')}}.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -41,7 +41,7 @@ None.
         `SourceBuffer` has been removed from the
         {{domxref("MediaSource")}}.
 
-## Example
+## Examples
 
 The spec description of `abort()` is somewhat confusing — consider for
 example step 1 of [reset
@@ -62,7 +62,7 @@ sourceBuffer.appendBuffer(buf);
 
 Let's say that after the call to `appendBuffer` BUT before the
 `updateend` event fires (i.e. a buffer is being appended but the operation
-has not yet completed) a user "scrubs" the video seeking to a new point in time.  In
+has not yet completed) a user "scrubs" the video seeking to a new point in time.  In
 this case you would want to manually call `abort()` on the source buffer to
 stop the decoding of the current buffer, then fetch and append the newly requested
 segment that relates to the current new position of the video.

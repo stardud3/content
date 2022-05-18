@@ -24,15 +24,19 @@ configuration settings.
 ## Syntax
 
 ```js
-const settingsPromise = imageCapture.getPhotoSettings()
+getPhotoSettings()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
 A {{jsxref("Promise")}} that resolves with a {{domxref("PhotoSettings")}} object
 containing the following properties:
 
-- `fillLightMode`:  The flash setting of the capture device, one of
+- `fillLightMode`:  The flash setting of the capture device, one of
   `"auto"`, `"off"`, or `"on"`.
 - `imageHeight`: The desired image height as an integer. The user agent
   selects the closest width value to this setting if it only supports discrete heights.
@@ -41,7 +45,7 @@ containing the following properties:
 - `redEyeReduction`: A boolean indicating whether the red-eye reduction
   should be used if it is available.
 
-## Example
+## Examples
 
 The following example, extracted from [Chrome's
 Image Capture / Photo Resolution Sample](https://googlechrome.github.io/samples/image-capture/photo-resolution.html), uses the results from

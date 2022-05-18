@@ -15,7 +15,7 @@ browser-compat: api.IDBKeyRange.lowerBound
 {{ APIRef("IndexedDB") }}
 
 The **`lowerBound()`** method of the
-{{domxref("IDBKeyRange")}} interface creates a new key range with only a lower bound.
+{{domxref("IDBKeyRange")}} interface creates a new key range with only a lower bound.
 By default, it includes the lower endpoint value and is closed.
 
 {{AvailableInWorkers}}
@@ -23,16 +23,16 @@ By default, it includes the lower endpoint value and is closed.
 ## Syntax
 
 ```js
-var myIDBKeyRange = IDBKeyRange.lowerBound(lower);
-var myIDBKeyRange = IDBKeyRange.lowerBound(lower, open);
+lowerBound(lower)
+lowerBound(lower, open)
 ```
 
 ### Parameters
 
-- lower
-  - : specifies the lower bound of the new key range.
-- open {{optional_inline}}
-  - : indicates whether the lower bound excludes the endpoint value. The default is
+- `lower`
+  - : Specifies the lower bound of the new key range.
+- `open` {{optional_inline}}
+  - : Indicates whether the lower bound excludes the endpoint value. The default is
     false.
 
 ### Return value
@@ -41,26 +41,23 @@ var myIDBKeyRange = IDBKeyRange.lowerBound(lower, open);
 
 ### Exceptions
 
-This method may raise a {{domxref("DOMException")}} of the following type:
+- `DataError` {{domxref("DOMException")}}
+  - : Thrown if the key associated with the `lower` parameter is not a valid key.
 
-| Exception   | Description                                     |
-| ----------- | ----------------------------------------------- |
-| `DataError` | The value parameter passed was not a valid key. |
-
-## Example
+## Examples
 
 The following example illustrates how you'd use a lower bound key range. Here we
-declare `keyRangeValue = IDBKeyRange.lowerBound("F", false);` — a range that
+declare `keyRangeValue = IDBKeyRange.lowerBound("F", false);` — a range that
 includes the value "F" and everything after it. We open a transaction (using
 {{domxref("IDBTransaction")}}) and an object store, and open a Cursor with
-{{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its
+{{domxref("IDBObjectStore.openCursor")}}, declaring `keyRangeValue` as its
 optional key range value. This means that the cursor will only retrieve the record with
-the key value "F" and all that come after it. If we used
+the key value "F" and all that come after it. If we used
 `IDBKeyRange.lowerBound("F", true);`, then the range would not include "F";
 only the values after it.
 
 > **Note:** For a more complete example allowing you to experiment with
-> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
+> key range, have a look at our [IDBKeyRange-example](https://github.com/mdn/indexeddb-examples/tree/master/idbkeyrange) repo
 > ([view the example live
 > too](https://mdn.github.io/indexeddb-examples/idbkeyrange/).)
 

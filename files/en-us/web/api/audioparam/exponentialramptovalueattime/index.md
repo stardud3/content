@@ -26,21 +26,21 @@ _previous_ event, follows an exponential ramp to the new value given in the
 ## Syntax
 
 ```js
-var AudioParam = AudioParam.exponentialRampToValueAtTime(value, endTime)
+exponentialRampToValueAtTime(value, endTime)
 ```
 
 ### Parameters
 
-- value
+- `value`
   - : A floating point number representing the value the `AudioParam` will ramp
     to by the given time.
-- endTime
+- `endTime`
   - : A double representing the exact time (in seconds) after the ramping starts that the
     changing of the value will stop.
 
-### Returns
+### Return value
 
-A reference to this `AudioParam` object. In some browsers older
+A reference to this `AudioParam` object. In some browsers older
 implementations of this interface return {{jsxref('undefined')}}.
 
 ## Examples
@@ -81,11 +81,11 @@ gainNode.connect(audioCtx.destination);
 
 // set buttons to do something onclick
 expRampPlus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(1.0, audioCtx.currentTime + 2);
 }
 
 expRampMinus.onclick = function() {
-  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
+  gainNode.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 2);
 }
 ```
 

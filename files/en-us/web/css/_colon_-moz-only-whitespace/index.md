@@ -14,9 +14,9 @@ browser-compat: css.selectors.-moz-only-whitespace
 
 {{Non-standard_Header}}
 
-> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
+> **Note:** In {{SpecName("CSS4 Selectors", "#the-empty-pseudo")}} the {{CSSxRef(":empty")}} selector was changed to act like `:-moz-only-whitespace`, but no browser currently supports this yet.
 
-The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that only contains text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)
+The **`:-moz-only-whitespace`** [CSS](/en-US/docs/Web/CSS) [pseudo-class](/en-US/docs/Web/CSS/Pseudo-classes) matches elements that only contain text nodes that only contain {{Glossary("whitespace")}}. (This includes elements with empty text nodes and elements with no child nodes.)
 
 ## Syntax
 
@@ -58,5 +58,5 @@ Briefly defined as `:blank` in {{SpecName("CSS4 Selectors", "#changes-2018-02")}
 
 ## See also
 
-- {{CSSxRef(":blank")}} {{Experimental_Inline}}
+- {{CSSxRef(":blank")}} {{Experimental_Inline}}
 - {{CSSxRef(":empty")}}

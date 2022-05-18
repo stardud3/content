@@ -17,16 +17,9 @@ The
 property reflect the HTML {{htmlattrxref("referrerpolicy","a")}} attribute of the
 {{HTMLElement("a")}} element defining which referrer is sent when fetching the resource.
 
-## Syntax
+## Value
 
-```js
-refStr = anchorElt.referrerPolicy;
-anchorElt.referrerPolicy = refStr;
-```
-
-### Value
-
-A {{domxref("DOMString")}}; one of the following:
+A string; one of the following:
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer

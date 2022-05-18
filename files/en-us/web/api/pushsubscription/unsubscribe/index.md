@@ -22,19 +22,19 @@ current subscription is successfully unsubscribed.
 ## Syntax
 
 ```js
-PushSubscription.unsubscribe().then(function(Boolean) { /* ... */ });
+unsubscribe()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
 A {{jsxref("Promise")}} that resolves to a boolean value when the current
 subscription is successfully unsubscribed.
 
-## Example
+## Examples
 
 ```js
 navigator.serviceWorker.ready.then(function(reg) {
@@ -42,7 +42,7 @@ navigator.serviceWorker.ready.then(function(reg) {
     subscription.unsubscribe().then(function(successful) {
       // You've successfully unsubscribed
     }).catch(function(e) {
-      // Unsubscription failed
+      // Unsubscribing failed
     })
   })
 });

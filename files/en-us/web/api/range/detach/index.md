@@ -11,16 +11,24 @@ browser-compat: api.Range.detach
 {{ApiRef("DOM")}}
 
 The **`Range.detach()`** method does nothing. It used to
-disable the {{domxref("Range")}} object and enable the browser to release associated
+disable the {{domxref("Range")}} object and enable the browser to release associated
 resources. The method has been kept for compatibility.
 
 ## Syntax
 
 ```js
-range.detach();
+detach()
 ```
 
-## Example
+### Parameters
+
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 ```js
 var range = document.createRange();

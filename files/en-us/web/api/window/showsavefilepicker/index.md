@@ -19,7 +19,7 @@ Either by selecting an existing file, or entering a name for a new file.
 ## Syntax
 
 ```js
-var FileSystemFileHandle = Window.showSaveFilePicker();
+window.showSaveFilePicker();
 ```
 
 ### Parameters
@@ -78,6 +78,5 @@ function getNewFileHandle() {
 
 ## See also
 
-- [File System Access API](/docs/Web/API/File_System_Access_API)
-- [The File System Access API:
-  simplifying access to local files](https://web.dev/file-system-access/)
+- [File System Access API](/en-US/docs/Web/API/File_System_Access_API)
+- [The File System Access API: simplifying access to local files](https://web.dev/file-system-access/)

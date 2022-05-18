@@ -20,21 +20,15 @@ current service worker is controlling.
 The {{domxref("Clients.get()")}} method could then be passed this ID to retrieve the
 associated client.
 
-## Syntax
+## Value
 
-```js
-var myClientId = fetchEvent.clientId;
-```
+A string that represents the client ID.
 
-### Value
-
-A {{domxref("DOMString")}} that represents the client ID.
-
-## Example
+## Examples
 
 ```js
 self.addEventListener('fetch', function(event) {
-  console.log(event.clientId);
+  console.log(event.clientId);
 });
 ```
 

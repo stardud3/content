@@ -23,20 +23,18 @@ You can access `CacheStorage` through the global
 {{domxref("caches")}} property.
 
 > **Note:** If the specified {{domxref("Cache")}} does not exist, a new
-> cache is created with that `cacheName` and a {{jsxref("Promise")}} that
-> resolves to this new {{domxref("Cache")}} object is returned.
+> cache is created with that `cacheName` and a {{jsxref("Promise")}} that
+> resolves to this new {{domxref("Cache")}} object is returned.
 
 ## Syntax
 
 ```js
-caches.open(cacheName).then(function(cache) {
-  // Do something with your cache
-});
+open(cacheName)
 ```
 
 ### Parameters
 
-- cacheName
+- `cacheName`
   - : The name of the cache you want to open.
 
 ### Return value

@@ -20,16 +20,9 @@ The **`returnValue`** property of the
 `<dialog>`, usually to indicate which button the user pressed to
 close it.
 
-## Syntax
+## Value
 
-```js
-dialogInstance.returnValue = 'myReturnValue';
-var myReturnValue = dialogInstance.returnValue;
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the `returnValue` of the dialog.
+A string representing the `returnValue` of the dialog.
 
 ## Examples
 
@@ -82,7 +75,7 @@ dialog.
         }
       }
 
-      // “Update details” button opens the <dialog> modally
+      // "Update details" button opens the <dialog> modally
       updateButton.addEventListener('click', function() {
         dialog.showModal();
         openCheck(dialog);

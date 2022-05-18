@@ -13,16 +13,9 @@ browser-compat: api.CSSCounterStyleRule.name
 
 The **`name`** property of the {{domxref("CSSCounterStyleRule")}} interface gets and sets the {{CSSxRef("&lt;custom-ident&gt;")}} defined as the `name` for the associated rule.
 
-## Syntax
+## Value
 
-```js
-let name = CSSCounterStyleRule.name;
-CSSCounterStyleRule.name = a;
-```
-
-### Value
-
-A {{domxref("CSSOMString")}}
+A string
 
 ## Examples
 

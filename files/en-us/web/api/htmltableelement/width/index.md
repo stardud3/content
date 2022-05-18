@@ -17,27 +17,21 @@ browser-compat: api.HTMLTableElement.width
 The **`HTMLTableElement.width`** property represents the
 desired width of the table.
 
-## Syntax
+## Value
 
-```js
-HTMLTableElement.width = width;
-var width = HTMLTableElement.width;
-```
+A string representing the width in number of pixels or as a percentage value.
 
-Where `width` is a string representing the width in number of pixels or as a
-percentage value.
-
-## Example
+## Examples
 
 ```js
 mytable.width = "75%";
 ```
 
-## Browser compatibility
-
-{{Compat}}
-
 ## Specifications
 
 - W3C DOM 2 HTML Specification [_HTMLTableElement_
   .width](https://www.w3.org/TR/DOM-Level-2-HTML/html.html#ID-77447361)
+
+## Browser compatibility
+
+{{Compat}}

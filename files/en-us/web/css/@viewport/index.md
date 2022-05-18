@@ -5,7 +5,7 @@ tags:
   - '@viewport'
   - At-rule
   - CSS
-  - Experimental
+  - Deprecated
   - Layout
   - Mobile
   - Reference
@@ -29,7 +29,7 @@ On mobile devices (or desktop devices that are in fullscreen mode), the initial 
 }
 ```
 
-> **Note:** The use of `<meta name="viewport">` tag overrides `@viewport`
+> **Note:** The use of `<meta name="viewport">` tag overrides `@viewport`
 
 ## Syntax
 

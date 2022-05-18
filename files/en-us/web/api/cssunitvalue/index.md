@@ -19,7 +19,7 @@ The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 
 ## Constructor
 
-- {{domxref("CSSUnitValue/CSSUnitValue", "CSSStyleValue.CSSUnitValue()")}}
+- {{domxref("CSSUnitValue.CSSUnitValue", "CSSUnitValue()")}}
   - : Creates a new `CSSUnitValue` object.
 
 ## Properties
@@ -27,7 +27,7 @@ The **`CSSUnitValue`** interface of the {{domxref('CSS_Object_Model#css_typed_ob
 - {{domxref('CSSUnitValue.value')}}
   - : Returns a double indicating the number of units.
 - {{domxref('CSSUnitValue.unit')}}
-  - : Returns a {{jsxref('USVString')}} indicating the type of unit.
+  - : Returns a string indicating the type of unit.
 
 ### Event handlers
 

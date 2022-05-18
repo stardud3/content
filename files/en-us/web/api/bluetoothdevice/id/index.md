@@ -14,17 +14,11 @@ browser-compat: api.BluetoothDevice.id
 {{APIRef("Bluetooth API")}}{{SeeCompatTable}}
 
 The **`BluetoothDevice.id`** read-only property returns a
-{{DOMxRef("DOMString")}} that uniquely identifies a device.
+string that uniquely identifies a device.
 
-## Syntax
+## Value
 
-```js
-var id = instanceOfBluetoothDevice.id
-```
-
-### Returns
-
-A {{DOMxRef("DOMString")}}.
+A string.
 
 ## Specifications
 

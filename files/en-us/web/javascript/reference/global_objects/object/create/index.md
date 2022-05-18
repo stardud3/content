@@ -45,8 +45,7 @@ A new object with the specified prototype object and properties.
 The `proto` parameter has to be either
 
 - {{jsxref("null")}} or
-- an {{jsxref("Object")}} excluding [primitive
-  wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
+- an {{jsxref("Object")}} excluding [primitive wrapper objects](/en-US/docs/Glossary/Primitive#primitive_wrapper_objects_in_javascript).
 
 If `proto` is neither of these a {{jsxref("TypeError")}} is thrown.
 
@@ -372,4 +371,4 @@ o2 = Object.create({p: 42}) */
 - {{jsxref("Object.defineProperties()")}}
 - {{jsxref("Object.prototype.isPrototypeOf()")}}
 - {{jsxref("Reflect.construct()")}}
-- John Resig's post on [getPrototypeOf()](http://ejohn.org/blog/objectgetprototypeof/)
+- John Resig's post on [getPrototypeOf()](https://johnresig.com/blog/objectgetprototypeof/)

@@ -16,7 +16,7 @@ The **`Array`** object, as with arrays in other programming languages, enables [
 
 ## Description
 
-In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
+In JavaScript, arrays aren't [primitives](/en-US/docs/Glossary/Primitive) but are instead `Array` objects with the following core characteristics:
 
 - **JavaScript arrays are resizable** and **can contain a mix of different [data types](/en-US/docs/Web/JavaScript/Data_structures)**. (When those characteristics are undesirable, use [typed arrays](/en-US/docs/Web/JavaScript/Typed_arrays) instead.)
 
@@ -78,6 +78,10 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
   - : Returns a new array formed by applying a given callback function to each element of the calling array, and then flattening the result by one level.
 - {{jsxref("Array.prototype.forEach()")}}
   - : Calls a function for each element in the calling array.
+- {{jsxref("Array.prototype.groupBy()")}} {{Experimental_Inline}}
+  - : Groups the elements of an array into an object according to the strings returned by a test function.
+- {{jsxref("Array.prototype.groupByToMap()")}} {{Experimental_Inline}}
+  - : Groups the elements of an array into a {{jsxref("Map")}} according to values returned by a test function.
 - {{jsxref("Array.prototype.includes()")}}
   - : Determines whether the calling array contains a value, returning `true` or `false` as appropriate.
 - {{jsxref("Array.prototype.indexOf()")}}
@@ -95,9 +99,9 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 - {{jsxref("Array.prototype.push()")}}
   - : Adds one or more elements to the end of an array, and returns the new `length` of the array.
 - {{jsxref("Array.prototype.reduce()")}}
-  - : Executes a user-supplied “reducer” callback function on each element of the array (from left to right), to reduce it to a single value.
+  - : Executes a user-supplied "reducer" callback function on each element of the array (from left to right), to reduce it to a single value.
 - {{jsxref("Array.prototype.reduceRight()")}}
-  - : Executes a user-supplied “reducer” callback function on each element of the array (from right to left), to reduce it to a single value.
+  - : Executes a user-supplied "reducer" callback function on each element of the array (from right to left), to reduce it to a single value.
 - {{jsxref("Array.prototype.reverse()")}}
   - : Reverses the order of the elements of an array _in place_. (First becomes the last, last becomes first.)
 - {{jsxref("Array.prototype.shift()")}}
@@ -125,7 +129,7 @@ In JavaScript, arrays aren’t [primitives](/en-US/docs/Glossary/Primitive) but 
 
 This section provides some examples of common array operations in JavaScript.
 
-> **Note:** If you’re not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
+> **Note:** If you're not yet familiar with array basics, consider first reading [JavaScript First Steps: Arrays](/en-US/docs/Learn/JavaScript/First_steps/Arrays), which [explains what arrays are](/en-US/docs/Learn/JavaScript/First_steps/Arrays#what_is_an_array), and includes other examples of common array operations.
 
 ### Create an array
 
@@ -166,17 +170,17 @@ This example shows how to access items in the `fruits` array by specifying the i
 ```js
 const fruits = ['Apple', 'Banana'];
 
-// The index of an array’s first element is always 0.
+// The index of an array's first element is always 0.
 fruits[0]; // Apple
 
-// The index of an array’s second element is always 1.
+// The index of an array's second element is always 1.
 fruits[1]; // Banana
 
-// The index of an array’s last element is always one
+// The index of an array's last element is always one
 // less than the length of the array.
 fruits[fruits.length - 1]; // Banana
 
-// Using a index number larger than the array’s length
+// Using a index number larger than the array's length
 // returns 'undefined'.
 fruits[99]; // undefined
 ```
@@ -193,7 +197,7 @@ console.log(fruits.indexOf('Banana'));
 
 ### Check if an array contains a certain item
 
-This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that’s not `-1`.
+This example shows two ways to check if the `fruits` array contains "`Banana`" and "`Cherry`": first with the [`includes()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/includes) method, and then with the [`indexOf()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/indexOf) method to test for an index value that's not `-1`.
 
 ```js
 const fruits = ['Apple', 'Banana'];
@@ -201,7 +205,7 @@ const fruits = ['Apple', 'Banana'];
 fruits.includes('Banana'); // true
 fruits.includes('Cherry'); // false
 
-// If indexOf() doesn’t return -1, the array contains the given item.
+// If indexOf() doesn't return -1, the array contains the given item.
 fruits.indexOf('Banana') !== -1; // true
 fruits.indexOf('Cherry') !== -1; // false
 ```
@@ -302,7 +306,7 @@ const newLength = fruits.unshift('Strawberry');
 console.log(fruits);
 // ["Strawberry", "Banana", "Mango"]
 console.log(newLength);
-// 2
+// 3
 ```
 
 ### Remove a single item by index
@@ -364,11 +368,11 @@ for (const fruit of fruits) {
 // Cherry
 ```
 
-But `for...of` is just one of many ways to iterate over any array; for more ways, see [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), and see the documentation for the [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`reduce()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/Reduce), and [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) methods — and see the next example, which uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method.
+But `for...of` is just one of many ways to iterate over any array; for more ways, see [Loops and iteration](/en-US/docs/Web/JavaScript/Guide/Loops_and_iteration), and see the documentation for the [`every()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/every), [`filter()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter), [`flatMap()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/flatMap), [`map()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map), [`reduce()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduce), and [`reduceRight()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/reduceRight) methods — and see the next example, which uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method.
 
 ### Call a function on each element in an array
 
-This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item’s index number.
+This example uses the [`forEach()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach) method to call a function on each element in the `fruits` array; the function causes each item to be logged to the console, along with the item's index number.
 
 ```js
 const fruits = ['Apple', 'Mango', 'Cherry'];
@@ -420,7 +424,7 @@ const fruitsCopy = fruits.slice();
 // ["Strawberry", "Mango"]
 ```
 
-All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Deep_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that’s completely independent from the original array.
+All built-in array-copy operations ([spread syntax](/en-US/docs/Web/JavaScript/Reference/Operators/Spread_syntax), [`Array.from()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/from), [`Array.prototype.slice()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/slice), and [`Array.prototype.concat()`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/concat)) create [shallow copies](/en-US/docs/Glossary/Shallow_copy). If you instead want a [deep copy](/en-US/docs/Glossary/Deep_copy) of an array, you can use {{jsxref("JSON.stringify()")}} to convert the array to a JSON string, and then {{jsxref("JSON.parse()")}} to convert the string back into a new array that's completely independent from the original array.
 
 ```js
 const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
@@ -428,7 +432,7 @@ const fruitsDeepCopy = JSON.parse(JSON.stringify(fruits));
 
 You can also create deep copies using the [`structuredClone()`](/en-US/docs/Web/API/structuredClone) method, which has the advantage of allowing {{Glossary("transferable objects")}} in the source to be _transferred_ to the new copy, rather than just cloned.
 
-Finally, it’s important to understand that assigning an existing array to a new variable doesn’t create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array’s name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
+Finally, it's important to understand that assigning an existing array to a new variable doesn't create a copy of either the array or its elements. Instead the new variable is just a reference, or alias, to the original array; that is, the original array's name and the new variable name are just two names for the exact same object (and so will always evaluate as [strictly equivalent](/en-US/docs/Web/JavaScript/Equality_comparisons_and_sameness#strict_equality_using_)). Therefore, if you make any changes at all either to the value of the original array or to the value of the new variable, the other will change, too:
 
 ```js
 const fruits = ['Strawberry', 'Mango'];
@@ -442,6 +446,40 @@ console.log(fruits);
 console.log(fruitsAlias);
 // ['Apple', 'Banana', 'Strawberry', 'Mango']
 ```
+
+### Grouping the elements of an array
+
+The {{jsxref("Array.prototype.groupBy()")}} methods can be used to group the elements of an array, using a test function that returns a string indicating the group of the current element.
+
+Here we have a simple inventory array that contains "food" objects that have a `name` and a `type`.
+
+```js
+const inventory = [
+  { name: 'asparagus', type: 'vegetables' },
+  { name: 'bananas',  type: 'fruit' },
+  { name: 'goat', type: 'meat' },
+  { name: 'cherries', type: 'fruit' },
+  { name: 'fish', type: 'meat' }
+];
+```
+
+To use `groupBy()`, you supply a callback function that is called with the current element, and optionally the current index and array, and returns a string indicating the group of the element.
+
+The code below uses a arrow function to return the `type` of each array element (this uses [object destructuring syntax for function arguments](/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment#unpacking_fields_from_objects_passed_as_a_function_parameter) to unpack the `type` element from the passed object).
+The result is an object that has properties named after the unique strings returned by the callback.
+Each property is assigned an array containing the elements in the group.
+
+```js
+let result = inventory.groupBy( ({ type }) => type );
+console.log(result.vegetables)
+// expected output: Array [Object { name: "asparagus", type: "vegetables" }]
+```
+
+Note that the returned object references the _same_ elements as the original array (not {{glossary("deep copy","deep copies")}}).
+Changing the internal structure of these elements will be reflected in both the original array and the returned object.
+
+If you can't use a string as the key, for example, if the information to group is associated with an object that might change, then you can instead use {{jsxref("Array.prototype.groupByToMap()")}}.
+This is very similar to `groupBy` except that it groups the elements of the array into a {{jsxref("Map")}} that can use an arbitrary value ({{Glossary("object")}} or {{Glossary("primitive")}}) as a key.
 
 ## Other examples
 
@@ -595,7 +633,7 @@ console.log(fruits.length);       // 2
 
 This is explained further on the {{jsxref("Array.length")}} page.
 
-#### Creating an array using the result of a match
+### Creating an array using the result of a match
 
 The result of a match between a {{jsxref("RegExp")}} and a string can create a JavaScript array that has properties and elements which provide information about the match. Such an array is returned by {{jsxref("RegExp.exec()")}} and {{jsxref("String.match()")}}.
 
@@ -664,8 +702,8 @@ The properties and elements returned from this match are as follows:
 
 - From the JavaScript Guide:
 
-  - [“Indexing object properties”](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
-  - [“Indexed collections: `Array` object”](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
+  - ["Indexing object properties"](/en-US/docs/Web/JavaScript/Guide/Working_with_Objects#indexing_object_properties)
+  - ["Indexed collections: `Array` object"](/en-US/docs/Web/JavaScript/Guide/Indexed_collections#array_object)
 
 - [Typed Arrays](/en-US/docs/Web/JavaScript/Typed_arrays)
 - [RangeError: invalid array length](/en-US/docs/Web/JavaScript/Reference/Errors/Invalid_array_length)

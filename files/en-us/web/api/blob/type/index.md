@@ -4,34 +4,21 @@ slug: Web/API/Blob/type
 tags:
   - API
   - Blob
-  - DOM
-  - File
   - File API
-  - Format
-  - MIME
-  - MIME Type
   - Property
   - Reference
-  - Type
 browser-compat: api.Blob.type
 ---
 {{APIRef("File API")}}
 
-The **`type`** property of a
-{{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
+The **`type`** property of a {{domxref("Blob")}} object returns the {{Glossary("MIME type")}} of the file.
 
-## Syntax
+## Value
 
-```js
-var mimetype = blob.type
-```
-
-### Value
-
-A {{domxref("DOMString")}} containing the file's MIME type, or an empty string if the
+A string containing the file's MIME type, or an empty string if the
 type could not be determined.
 
-## Example
+## Examples
 
 This example asks the user to select a number of files, then checks each file to make
 sure it's one of a given set of image file types.

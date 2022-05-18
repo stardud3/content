@@ -92,7 +92,7 @@ Server-side code can be written in any number of programming languages — examp
 
 Developers typically write their code using **web frameworks**. Web frameworks are collections of functions, objects, rules and other code constructs designed to solve common problems, speed up development, and simplify the different types of tasks faced in a particular domain.
 
-Again, while both client and server-side code use frameworks, the domains are very different, and hence so are the frameworks. Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of “common” web server functionality that you might otherwise have to implement yourself (e.g. support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
+Again, while both client and server-side code use frameworks, the domains are very different, and hence so are the frameworks. Client-side web frameworks simplify layout and presentation tasks while server-side web frameworks provide a lot of "common" web server functionality that you might otherwise have to implement yourself (e.g. support for sessions, support for users and authentication, easy database access, templating libraries, etc.).
 
 > **Note:** Client-side frameworks are often used to help speed up development of client-side code, but you can also choose to write all the code by hand; in fact, writing your code by hand can be quicker and more efficient if you only need a small, simple web site UI.
 >
@@ -132,11 +132,11 @@ Servers can store and use information about clients to provide a convenient and 
 
 A deeper analysis of user habits can be used to anticipate their interests and further customize responses and notifications, for example providing a list of previously visited or popular locations you may want to look at on a map.
 
-> **Note:** [Google Maps](https://maps.google.com/) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
+> **Note:** [Google Maps](https://www.google.com/maps) saves your search and visit history. Frequently visited or frequently searched locations are highlighted more than others.
 >
 > Google search results are optimized based on previous searches.
 >
-> 1. Go to [Google search](https://google.com).
+> 1. Go to [Google search](https://www.google.com/).
 > 2. Search for "football".
 > 3. Now try typing "favorite" in the search box and observe the autocomplete search predictions.
 >

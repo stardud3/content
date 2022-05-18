@@ -11,10 +11,11 @@ tags:
   - setKeyframes()
   - waapi
   - web animations api
+spec-urls: https://drafts.csswg.org/web-animations-1/#processing-a-keyframes-argument
 ---
 {{ SeeCompatTable() }}{{ APIRef("Web Animations API") }}
 
-{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
+{{domxref("Element.animate()")}}, {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}, and {{domxref("KeyframeEffect.setKeyframes()")}} all accept objects formatted to represent a set of keyframes. There are several options to this format, which are explained below.
 
 ## Syntax
 
@@ -123,22 +124,7 @@ The following special attributes may also be specified:
 
 ## Specifications
 
-<table class="no-markdown">
-  <tbody>
-    <tr>
-      <th scope="col">Specification</th>
-      <th scope="col">Status</th>
-      <th scope="col">Comment</th>
-    </tr>
-    <tr>
-      <td>
-        {{SpecName("Web Animations", "#processing-a-keyframes-argument", "Keyframe object formats")}}
-      </td>
-      <td>{{Spec2('Web Animations')}}</td>
-      <td>Initial definition</td>
-    </tr>
-  </tbody>
-</table>
+{{Specifications}}
 
 ## Browser compatibility
 
@@ -150,5 +136,5 @@ The following special attributes may also be specified:
 
 - [Web Animations API](/en-US/docs/Web/API/Web_Animations_API)
 - {{domxref("Element.animate()")}}
-- {{domxref("KeyframeEffect.KeyframeEffect()")}}
+- {{domxref("KeyframeEffect.KeyframeEffect", "KeyframeEffect()")}}
 - {{domxref("KeyframeEffect.setKeyframes()")}}

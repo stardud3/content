@@ -1,5 +1,5 @@
 ---
-title: 'Location: ancestorOrigins'
+title: location.ancestorOrigins
 slug: Web/API/Location/ancestorOrigins
 tags:
   - API
@@ -17,7 +17,7 @@ browsing contexts of the document associated with the given {{domxref("Location"
 object.
 
 You can use `location.ancestorOrigins` in the script for a document to
-determine, for example, whenever the document is being framed by a site which you don’t
+determine, for example, whenever the document is being framed by a site which you don't
 expect it to be framed by. You can also use it to vary the behavior of the document
 based on what site or list of sites is framing it.
 

@@ -16,7 +16,7 @@ The **`WebGLRenderingContext.drawElements()`** method of the [WebGL API](/en-US/
 ## Syntax
 
 ```js
-void gl.drawElements(mode, count, type, offset);
+drawElements(mode, count, type, offset)
 ```
 
 ### Parameters
@@ -61,7 +61,7 @@ void gl.drawElements(mode, count, type, offset);
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ### Exceptions
 
@@ -69,7 +69,7 @@ None.
   `gl.INVALID_ENUM` error is thrown.
 - If `offset` is not a valid multiple of the size of the given type, a
   `gl.INVALID_OPERATION` error is thrown.
-- If `count` is negative, a `gl.INVALID_VALUE` error is thrown.
+- If `count` is negative, a `gl.INVALID_VALUE` error is thrown.
 
 ## Examples
 

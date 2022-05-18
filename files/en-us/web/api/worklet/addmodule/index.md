@@ -24,8 +24,8 @@ adds it to the current `Worklet`.
 ## Syntax
 
 ```js
-addPromise = worklet.addModule(moduleURL);
-addPromise = worklet.addModule(moduleURL, options);
+addModule(moduleURL)
+addModule(moduleURL, options)
 ```
 
 ### Parameters
@@ -50,13 +50,13 @@ added. The promise doesn't return any value.
 
 ### Exceptions
 
-If `addModule()` fails, it rejects the promise, delivering one of the
+If `addModule()` fails, it rejects the promise, delivering one of the
 following errors to the rejection handler.
 
-- `AbortError`
+- `AbortError` {{domxref("DOMException")}}
   - : The specified script is invalid or could not be loaded.
-- `SyntaxError`
-  - : The specified `moduleURL` is invalid.
+- `SyntaxError` {{domxref("DOMException")}}
+  - : The specified `moduleURL` is invalid.
 
 ## Examples
 

@@ -10,7 +10,7 @@ tags:
   - Reference
 browser-compat: api.CompositionEvent.locale
 ---
-{{deprecated_header}}{{APIRef("DOM Events")}}
+{{deprecated_header}}{{APIRef("UI Events")}}
 
 The **`locale`** read-only property of the
 {{domxref("CompositionEvent")}} interface returns the locale of current input method
@@ -20,15 +20,9 @@ The **`locale`** read-only property of the
 > Even if technically it is accessible, the way to set it up when creating a {{domxref("CompositionEvent")}}
 > is not guaranteed to be coherent.
 
-## Syntax
+## Value
 
-```js
-myLocale = CompositionEvent.locale
-```
-
-### Value
-
-A {{domxref("DOMString")}} representing the locale of current input method.
+A string representing the locale of current input method.
 
 ## Specifications
 

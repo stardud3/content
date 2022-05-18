@@ -19,14 +19,16 @@ the {{domxref("FileReader.readyState","readyState")}} will be `DONE`.
 ## Syntax
 
 ```js
-instanceOfFileReader.abort();
+abort()
 ```
 
-### Exceptions
+### Parameters
 
-- `DOM_FILE_ABORT_ERR`
-  - : Thrown when `abort` is called while no read operation is in progress
-    (that is, the state isn't `LOADING`).
+None.
+
+### Return value
+
+None ({{jsxref("undefined")}}).
 
 ## Specifications
 

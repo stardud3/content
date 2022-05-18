@@ -23,13 +23,11 @@ The legacy
 read-only property returns an `unsigned long long` representing the moment,
 in milliseconds since the UNIX epoch, when the browser received the last byte of the
 response, or when the connection is closed if this happened first, from the server from
-a cache or from a local resource.
+a cache or from a local resource.
 
-## Syntax
+## Value
 
-```js
-time = performanceTiming.responseEnd;
-```
+An `unsigned long long`.
 
 ## Specifications
 

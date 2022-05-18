@@ -14,7 +14,7 @@ browser-compat: api.HTMLInputElement.stepDown
 
 The
 **`HTMLInputElement.stepDown([n])`** method decrements the
-value of a numeric type of  {{HTMLElement("input")}} element by the value of the
+value of a numeric type of {{HTMLElement("input")}} element by the value of the
 [`step`](/en-US/docs/Web/HTML/Attributes/step) attribute or up
 to `n` multiples of the step attribute if a number is passed as the
 parameter.
@@ -48,7 +48,7 @@ parameter, would have resulted in `16:45`, as `n` defaults to
 <input type="month" max="2019-12" step="12">
 ```
 
-However, calling `stepDown` on `<input type="time" max="17:00" step="900">` would not set the value to `17:00`, as one would expect — and as it does for `stepUp` when the input is `<input type="time" min="17:00" step="900">`. Instead, the first call to `stepDown` will set the initial value to `23:45` even though the `max` attribute is set. The second call will set the value to `17:00`. And the third call to will set the value to `16:45`.
+However, calling `stepDown` on `<input type="time" max="17:00" step="900">` would not set the value to `17:00`, as one would expect — and as it does for `stepUp` when the input is `<input type="time" min="17:00" step="900">`. Instead, the first call to `stepDown` will set the initial value to `23:45` even though the `max` attribute is set. The second call will set the value to `17:00`. And the third call to will set the value to `16:45`.
 
 ```js
 let input1 = document.createElement('input');
@@ -107,21 +107,26 @@ support the `step` attribute (see the list of supported input types above), or i
 ## Syntax
 
 ```js
-element.stepDown( [ stepDecrement ] );
+stepDown()
+stepDown(stepDecrement)
 ```
 
 ### Parameters
 
-- _`stepDecrement`_
+- _`stepDecrement`_ {{optional_inline}}
 
-  - : The optional  `stepDecrement` parameter is a numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
+  - : A numeric value.  If no parameter is passed, _stepDecrement_ defaults to 1.
 
     If the value is a float, the value will decrement as if
     [`Math.floor(stepDecrement)`](/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor)
     was passed. If the value is negative, the value will be incremented instead of
     decremented.
 
-## Example
+### Return value
+
+None ({{jsxref("undefined")}}).
+
+## Examples
 
 Click the button in this example to decrement the {{HTMLElement("input/number",
   "number")}} input type:
@@ -152,14 +157,14 @@ button.addEventListener('click', function() {
 );
 
 function stepondown() {
-  let input = document.getElementById('theNumber');
-  let val = document.getElementById('decrementer').value;
+  let input = document.getElementById('theNumber');
+  let val = document.getElementById('decrementer').value;
 
-  if (val) {  /* decrement with a parameter */
-    input.stepDown(val);
-  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
-    input.stepDown();
-  }
+  if (val) {  /* decrement with a parameter */
+    input.stepDown(val);
+  } else {    /* or without a parameter. Try it with 0, 5, -2, etc. */
+    input.stepDown();
+  }
 }
 ```
 
@@ -173,7 +178,7 @@ input:invalid {
 
 ### Result
 
-{{EmbedLiveSample("Example")}}
+{{EmbedLiveSample("Examples")}}
 
 Note if you don't pass a parameter to the `stepDown()` method, it defaults
 to 1. Any other value is a multiplier of the `step` attribute value, which in

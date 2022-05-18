@@ -25,7 +25,7 @@ represents an underlying audio processing mechanism of an
 > only internally by the creation of an associated {{domxref("AudioWorkletNode")}}s.
 
 ```js
-new AudioWorkletProcessor(options);
+new AudioWorkletProcessor(options)
 ```
 
 ### Parameters
@@ -60,7 +60,7 @@ new AudioWorkletProcessor(options);
 
 The newly constructed {{domxref("AudioWorkletProcessor")}} instance.
 
-## Example
+## Examples
 
 In this example we pass custom options to the
 {{domxref("AudioWorkletNode.AudioWorkletNode", "AudioWorkletNode constructor")}} and
@@ -108,7 +108,7 @@ The console output will be as follows:
 
 ```js
 > 1 // AudioWorkletNode options.numberOfInputs set to default
-> Map(2) {1 => "one", 2 => "two"} // A cloned map under someUsefulVariable
+> Map(2) {1 => "one", 2 => "two"} // A cloned map under someUsefulVariable
 ```
 
 ## Specifications

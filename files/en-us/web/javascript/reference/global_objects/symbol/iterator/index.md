@@ -11,7 +11,7 @@ browser-compat: javascript.builtins.Symbol.iterator
 ---
 {{JSRef}}
 
-The well-known **`Symbol.iterator`** symbol specifies the default iterator for an object. Used by [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
+The well-known **`Symbol.iterator`** symbol specifies the default iterator for an object. Used by [`for...of`](/en-US/docs/Web/JavaScript/Reference/Statements/for...of).
 
 {{EmbedInteractiveExample("pages/js/symbol-iterator.html")}}
 
@@ -47,7 +47,7 @@ myIterable[Symbol.iterator] = function* () {
 [...myIterable] // [1, 2, 3]
 ```
 
-Or iterables can be defined directly inside a class or object using a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#Computed_property_names):
+Or iterables can be defined directly inside a class or object using a [computed property](/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer#computed_property_names):
 
 ```js
 class Foo {

@@ -34,17 +34,11 @@ For the {{event("drop")}} and {{event("dragend")}} events, `dropEffect` will
 be set to the action that was desired, which will be the value `dropEffect`
 had after the last {{event("dragenter")}} or {{event("dragover")}} event. In a
 {{event("dragend")}} event, for instance, if the desired dropEffect is "move", then the
-data being dragged should be removed from the source.
+data being dragged should be removed from the source.
 
-## Syntax
+## Value
 
-```js
-dataTransfer.dropEffect;
-```
-
-### Values
-
-A {{domxref("DOMString")}} representing the drag operation effect. The possible values
+A string representing the drag operation effect. The possible values
 are:
 
 - `copy`
@@ -64,7 +58,7 @@ retained.
 This example shows the use of the `dropEffect` and
 {{domxref("DataTransfer.effectAllowed","effectAllowed")}} properties.
 
-### HTML Content
+### HTML
 
 ```html
 <div>
@@ -75,7 +69,7 @@ This example shows the use of the `dropEffect` and
 <div id="target" ondrop="drop_handler(event);" ondragover="dragover_handler(event);">Drop Zone</div>
 ```
 
-### CSS Content
+### CSS
 
 ```css
 div {
@@ -93,7 +87,7 @@ div {
 }
 ```
 
-### JavaScript Content
+### JavaScript
 
 ```js
 function dragstart_handler(ev) {

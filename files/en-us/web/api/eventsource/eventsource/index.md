@@ -18,20 +18,22 @@ remote resource.
 ## Syntax
 
 ```js
-eventSource = new EventSource(url, configuration);
+new EventSource(url)
+new EventSource(url, options)
 ```
 
 ### Parameters
 
 - `url`
-  - : A {{domxref("USVString")}} that represents the location of the remote resource
+  - : A string that represents the location of the remote resource
     serving the events/messages.
-- `configuration` {{optional_inline}}
+- `options` {{optional_inline}}
 
   - : Provides options to configure the new connection. The possible entries are:
 
-    - `withCredentials`, defaulting to `false`, indicating if
-      CORS should be set to `include` credentials.
+    - `withCredentials` {{optional_inline}}
+      - : A boolean value, defaulting to `false`, indicating
+        if CORS should be set to `include` credentials.
 
 ## Examples
 

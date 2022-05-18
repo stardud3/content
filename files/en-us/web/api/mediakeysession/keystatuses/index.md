@@ -15,14 +15,12 @@ browser-compat: api.MediaKeySession.keyStatuses
 {{APIRef("EncryptedMediaExtensions")}}
 
 The **`MediaKeySession.keyStatuses`** read-only property
-returns a reference to a read-only {{domxref('MediaKeyStatusMap')}} of the current
+returns a reference to a read-only {{domxref('MediaKeyStatusMap')}} of the current
 session's keys and their statuses.
 
-## Syntax
+## Value
 
-```js
-var mediaKeyStatusMapObj = mediaKeySessionObj.keyStatuses;
-```
+A {{domxref('MediaKeyStatusMap')}}.
 
 ## Specifications
 

@@ -19,19 +19,19 @@ measured text (such as its width, for example).
 ## Syntax
 
 ```js
-ctx.measureText(text);
+measureText(text)
 ```
 
 ### Parameters
 
 - `text`
-  - : The text {{jsxref("String")}} to measure.
+  - : The text string to measure.
 
 ### Return value
 
 A {{domxref("TextMetrics")}} object.
 
-## Example
+## Examples
 
 Given this {{HTMLElement("canvas")}} element:
 

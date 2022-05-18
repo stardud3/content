@@ -20,7 +20,7 @@ The application defined timestamp can also be retrieved by one of the
 {{domxref("Performance.getEntriesByName","getEntriesByName()")}} or
 {{domxref("Performance.getEntriesByType","getEntriesByType()")}}).
 
-The `mark()'s` stores its data internally as
+The `mark()'s` stores its data internally as
 {{domxref("PerformanceEntry")}}.
 
 {{AvailableInWorkers}}
@@ -28,14 +28,14 @@ The `mark()'s` stores its data internally as
 ## Syntax
 
 ```js
-performance.mark(name);
-performance.mark(measureName, markOptions)
+mark(name)
+mark(name, markOptions)
 ```
 
-### Arguments
+### Parameters
 
-- name
-  - : A {{domxref("DOMString")}} representing the name of the mark. If the
+- `name`
+  - : A string representing the name of the mark. If the
     `name` given to this method already exists in the
     {{domxref("PerformanceTiming")}} interface, {{jsxref("SyntaxError")}} is
     thrown.
@@ -50,10 +50,9 @@ performance.mark(measureName, markOptions)
 
 ### Return value
 
-- entry
-  - : The {{domxref("PerformanceMark")}} entry that was created.
+The {{domxref("PerformanceMark")}} entry that was created.
 
-## Example
+## Examples
 
 The following example shows how to use `mark()` to create and retrieve
 {{domxref("PerformanceMark")}} entries.

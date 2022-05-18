@@ -29,7 +29,7 @@ When added to a collection of cards, the cards should line up in two dimensions.
 
 > **Callout:**
 >
-> [Download this example](https://github.com/mdn/css-examples/blob/master/css-cookbook/card--download.html)
+> [Download this example](https://github.com/mdn/css-examples/blob/main/css-cookbook/card--download.html)
 
 ## Choices made
 
@@ -74,5 +74,5 @@ The various layout methods have different browser support. See the charts below 
 
 ## See also
 
-- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
+- {{Cssxref("grid-template-columns")}}, {{Cssxref("grid-template-rows")}}, {{Cssxref("gap")}}
 - [Inclusive Components: Card](https://inclusive-components.design/cards/)

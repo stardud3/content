@@ -11,7 +11,7 @@ tags:
   - Input Type
   - Reference
   - button
-browser-compat: html.elements.input.input-button
+browser-compat: html.elements.input.type_button
 ---
 
 {{HTMLRef("Input_types")}}
@@ -20,13 +20,13 @@ browser-compat: html.elements.input.input-button
 
 {{EmbedInteractiveExample("pages/tabbed/input-button.html", "tabbed-shorter")}}
 
-> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}’s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
+> **Note:** While `<input>` elements of type `button` are still perfectly valid HTML, the newer {{HTMLElement("button")}} element is now the favored way to create buttons. Given that a {{HTMLElement("button")}}'s label text is inserted between the opening and closing tags, you can include HTML in the label, even images.
 
 <table class="properties">
   <tbody>
     <tr>
-      <td><strong>{{anch("Value")}}</strong></td>
-      <td>A {{domxref("DOMString")}} used as the button's label</td>
+      <td><strong><a href="#value">Value</a></strong></td>
+      <td>A string used as the button's label</td>
     </tr>
     <tr>
       <td><strong>Events</strong></td>
@@ -44,6 +44,10 @@ browser-compat: html.elements.input.input-button
       <td><code>value</code></td>
     </tr>
     <tr>
+      <td><strong>DOM interface</strong></td>
+      <td><p>{{domxref("HTMLInputElement")}}</p></td>
+    </tr>
+    <tr>
       <td><strong>Methods</strong></td>
       <td>None</td>
     </tr>
@@ -54,7 +58,7 @@ browser-compat: html.elements.input.input-button
 
 ### Button with a value
 
-An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a {{domxref("DOMString")}} that is used as the button's label.
+An `<input type="button">` elements' {{htmlattrxref("value", "input")}} attribute contains a string that is used as the button's label.
 
 ```html
 <input type="button" value="Click Me">

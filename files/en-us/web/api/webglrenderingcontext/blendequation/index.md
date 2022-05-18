@@ -21,7 +21,7 @@ The blend equation determines how a new pixel is combined with a pixel already i
 ## Syntax
 
 ```js
-void gl.blendEquation(mode);
+blendEquation(mode)
 ```
 
 ### Parameters
@@ -45,7 +45,7 @@ void gl.blendEquation(mode);
       - `gl.MIN`: Minimum of source and destination,
       - `gl.MAX`: Maximum of source and destination.
 
-    **default value**: `gl.FUNC_ADD`
+    **default value**: `gl.FUNC_ADD`
 
 ### Exception
 
@@ -54,7 +54,7 @@ If _mode_ is not one of the three possible values, a
 
 ### Return value
 
-None.
+None ({{jsxref("undefined")}}).
 
 ## Examples
 

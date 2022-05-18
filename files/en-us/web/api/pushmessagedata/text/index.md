@@ -20,24 +20,24 @@ The **`text()`** method of the {{domxref("PushMessageData")}} interface extracts
 ## Syntax
 
 ```js
-var myText = pushEvent.data.text();
+text()
 ```
 
 ### Parameters
 
 None.
 
-### Returns
+### Return value
 
-A {{domxref("USVString")}}.
+A string.
 
 ## Examples
 
 ```js
 self.addEventListener('push', function(event) {
-  var textObj = event.data.text();
+  var textObj = event.data.text();
 
-  // do something with your text
+  // do something with your text
 });
 ```
 

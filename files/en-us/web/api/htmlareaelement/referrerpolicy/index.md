@@ -18,16 +18,9 @@ property reflect the HTML {{htmlattrxref("referrerpolicy","area")}} attribute of
 {{HTMLElement("area")}} element defining which referrer is sent when fetching the
 resource.
 
-## Syntax
+## Value
 
-```js
-refStr = areaElt.referrerPolicy;
-areaElt.referrerPolicy = refStr;
-```
-
-### Value
-
-A {{domxref("DOMString")}}; one of the following:
+A string; one of the following:
 
 - no-referrer
   - : The {{HTTPHeader("Referer")}} header will be omitted entirely. No referrer

@@ -14,8 +14,8 @@ browser-compat: api.MediaStreamTrack.getCapabilities
 {{APIRef("Media Capture and Streams")}}
 
 The **`getCapabilities()`** method of
-the {{domxref("MediaStreamTrack")}} interface returns a
-{{domxref('MediaTrackCapabilities')}} object which specifies the values or range of
+the {{domxref("MediaStreamTrack")}} interface returns a
+{{domxref('MediaTrackCapabilities')}} object which specifies the values or range of
 values which each constrainable property, based upon the platform and {{Glossary("user
     agent")}}.
 
@@ -27,14 +27,16 @@ and settings](/en-US/docs/Web/API/Media_Streams_API/Constraints) for details on 
 ## Syntax
 
 ```js
-const capabilities = track.getCapabilities()
+getCapabilities()
 ```
+
+### Parameters
+
+None.
 
 ### Return value
 
-A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of
-values which are supported for each of the user agent's supported constrainable
-properties.
+A {{domxref('MediaTrackCapabilities')}} object which specifies the value or range of values which are supported for each of the user agent's supported constrainable properties.
 
 ## Specifications
 
